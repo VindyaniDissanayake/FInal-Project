@@ -1,22 +1,4 @@
-<?php
-// Connect to the database
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "news_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch recent news articles
-$sql = "SELECT id, title, summary, published_date FROM articles ORDER BY published_date DESC LIMIT 10";
-$result = $conn->query($sql);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +6,6 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>final project</title>
-    <defs>
-      <clipPath id="clip-fox-news-logo">
-        <rect width="233.445" height="52.805" />
-      </clipPath>
-    </defs>
     <style>
         body { font-family: Arial, sans-serif; }
         .news-article { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc; }
@@ -39,7 +16,6 @@ $result = $conn->query($sql);
 </head>
 <body>
     <nav>
-      
         <div class="main-nav container flex">
     
             <div class="nav-links">
@@ -218,44 +194,52 @@ $result = $conn->query($sql);
         
     </style>
 <h1>Latest News</h1>
-<main>
-<section class="hero">
-  <h1>Breaking News: Headline Here</h1>
-  <img src=""
-  <p>A brief description of the top news story.</p>
-  <a href="#">Read More</a>
-</section>
 
-<section class="featured-stories">
-  <h2>Featured Stories</h2>
-  <img src=""
-  <div class="story">
-      <h3>Story 1 Headline</h3>
-      <p>A brief summary of the story.</p>
-      <a href="#">Read More</a>
-  </div>
-  <div class="story">
-      <h3>Story 2 Headline</h3>
-      <img src=""
-      <p>A brief summary of the story.</p>
-      <a href="#">Read More</a>
-  </div>
-  </section>
+<div class="news-item">
+                <img src="C:\Users\Acer\Downloads\latest img international.jpg" alt="News Image 1">
+                <div class="content">
+                    <h3><a href="#">Breaking News: Global Economy on the Rise</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero...</p>
+                    <a href="#" class="read-more">Read more...</a>
+                </div>
+            </div>
 
-<section class="latest-news">
-  <h2>Latest News</h2>
-  <ul>
-      <li><a href="#">News Story 1</a></li>
-      <li><a href="#">News Story 2</a></li>
-      </ul>
-</section>
-</main>
-               
+            <div class="news-item">
+                <img src="C:\Users\Acer\Downloads\sport letest img 1.webp" alt="News Image 2">
+                <div class="content">
+                    <h3><a href="#">Tech Innovations That Will Change Your Life</a></h3>
+                    <p>Sports News Today Live Updates: Argentina Vs Peru live streaming details: How to watch Lionel Messi in FIFA World Cup 2026 Qualifiers in India (PTI)
+                      Sports News Today highlights: In the dynamic world of sports, every match and series brings fresh excitement. 
+                      Our Sports News offers real-time updates and in-depth coverage of cricket series, hockey showdowns, and badminton 
+                      tournaments, bringing you closer to the games you love. From thrilling last-ball finishes in cricket to
+                      high-stakes hockey matches and intense badminton rallies, we deliver insights, key moments, 
+                      and player achievements. Our goal is to keep you connected to the latest action, whether it’s a 
+                      league championship, an international series, or a standout individual performance, so you’re always
+                      in the know on the biggest stories in sports.</p>
+                    <a href="#" class="read-more">Read more...</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="C:\Users\Acer\Downloads\education ltest img 1.webp"alt="News Image 3">
+                <div class="content">
+                    <h3><a href="#">Sports: The Biggest Wins of the Year</a></h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae...</p>
+                    <a href="#" class="read-more">Read more...</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 <header class="header responsive-wrapper">
   <div class="header-left">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="233.445" height="52.805" viewBox="0 0 233.445 52.805">
-      
+      <defs>
+        <clipPath id="clip-fox-news-logo">
+          <rect width="233.445" height="52.805" />
+        </clipPath>
+      </defs>
       <g id="fox-news-logo" clip-path="url(#clip-fox-news-logo)">
         <g id="Group_1" data-name="Group 1" transform="translate(-2179.585 601.093)">
           <path id="Path_5" data-name="Path 5" d="M4.185-29.205H22.59v4.59H9.5v7.7h11.97v4.545H9.5V0H4.185Zm27.675,6.75a12.117,12.117,0,0,1,4.14.7,8.656,8.656,0,0,1,3.33,2.138q3.105,3.15,3.105,8.73,0,5.49-3.105,8.64A9.921,9.921,0,0,1,31.86.63,10.222,10.222,0,0,1,24.3-2.25Q21.2-5.355,21.2-10.89q0-5.625,3.105-8.73A10.217,10.217,0,0,1,31.86-22.455Zm5.265,11.52a8.372,8.372,0,0,0-1.35-5.2,4.5,4.5,0,0,0-3.757-1.733,5.013,5.013,0,0,0-3.937,1.733,7.654,7.654,0,0,0-1.53,5.2,8.27,8.27,0,0,0,1.372,5.2A4.534,4.534,0,0,0,31.68-4.005,4.989,4.989,0,0,0,35.6-5.738,7.654,7.654,0,0,0,37.125-10.935ZM64.62,0H58.14l-5.4-7.02L47.7,0H41.175l8.5-10.89-8.5-11.025H47.7l5.355,7.02,5.085-7.02h6.48L56.16-10.89ZM78.48-29.205l12.87,20.7v-20.7h5.31V0h-5.4L77.985-21.42V0h-5.31V-29.205Zm37.71,9.945a9.966,9.966,0,0,1,1.688,3.33,12.23,12.23,0,0,1,.563,3.465,20.182,20.182,0,0,1-.18,2.835H104.13a7.606,7.606,0,0,0,1.305,4.32,4.268,4.268,0,0,0,3.69,1.665q3.285,0,3.915-2.88H118.4A7.849,7.849,0,0,1,115.38-1.35,9.93,9.93,0,0,1,109.125.63a9.489,9.489,0,0,1-7.245-3.15,11.96,11.96,0,0,1-3.015-8.415,11.822,11.822,0,0,1,3.015-8.46,9.529,9.529,0,0,1,7.245-3.06A8.486,8.486,0,0,1,116.19-19.26Zm-7.02,1.035a4.385,4.385,0,0,0-3.51,1.463,6.578,6.578,0,0,0-1.485,3.758h9.315q0-3.555-2.25-4.77A4.4,4.4,0,0,0,109.17-18.225Zm13.455-3.645,4.41,15.615,4.185-14.4h4.815L140.22-6.21l4.455-15.66h5.31L142.785,0h-5.22l-4.05-13.1L129.555,0H124.29l-7.245-21.87Zm31.05,15.21q.09,3.105,4.545,3.1a4.934,4.934,0,0,0,2.813-.743,2.1,2.1,0,0,0,1.1-1.733,1.847,1.847,0,0,0-.675-1.53,6.639,6.639,0,0,0-2.115-.99l-4.77-1.71q-5.31-1.845-5.31-6.03a5.172,5.172,0,0,1,2.5-4.477,11.8,11.8,0,0,1,6.7-1.687,10.044,10.044,0,0,1,6.48,1.845,6,6,0,0,1,2.362,4.635h-4.995a2.191,2.191,0,0,0-1.035-1.71,4.856,4.856,0,0,0-2.7-.63,4.6,4.6,0,0,0-2.723.7,1.974,1.974,0,0,0-.967,1.6q0,1.575,2.655,2.34l5.175,1.935a10.264,10.264,0,0,1,3.938,2.182A4.576,4.576,0,0,1,168.03-6.12a5.8,5.8,0,0,1-2.565,4.68,11.1,11.1,0,0,1-7.02,2.07,11.753,11.753,0,0,1-7.02-1.913,6.353,6.353,0,0,1-2.7-5.377Z" transform="translate(2245 -561)" />

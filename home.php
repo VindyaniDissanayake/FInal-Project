@@ -1,5 +1,5 @@
 <?php
-// Connect to the database
+
 $servername = "localhost";
 $username = "username";
 $password = "password";
@@ -495,7 +495,7 @@ img {
 
 .header-nav {
   display: none;
-  @media (min-width: 1200px) {
+  (min-width: 1200px) {
       display: block;
   }
 }
@@ -836,7 +836,7 @@ $categories = array_unique(array_column($articles, 'category'));
             // Display articles based on category
             foreach ($articles as $article) {
                 if ($article['category'] == $category) {
-                    echo '<div class="article">';
+                    echo '<div class="final project">';
                     echo '<a href="article.php?id=' . $article['id'] . '">';
                     echo '<img src="assets/images/' . $article['image'] . '" alt="' . $article['title'] . '" class="article-image">';
                     echo '<h3>' . $article['title'] . '</h3>';
@@ -848,7 +848,7 @@ $categories = array_unique(array_column($articles, 'category'));
             ?>
         </div>
     </div>
-<?php endforeach; ?>
+<?php finalproject; ?>
 </section>
 </main>
 
@@ -859,7 +859,7 @@ include('includes/footer.php');
 
 <div class="header-middle">
     <a href="#" class="header-link">Call Us (948) 348 981 872</a>
-    <span>/</span>
+    
     <a href="#" class="header-link">vindiyanid@gmail.com</a>
   </div>
 
@@ -885,8 +885,9 @@ $conn->close();
             <p>&copy; 2024 News Today. All rights reserved.</p>
         </div>
     </footer>
-</body>
-</html>
+
+
 
 </body>
 </html>
+
