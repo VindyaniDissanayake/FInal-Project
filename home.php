@@ -1,22 +1,4 @@
-<?php
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "news_db";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch recent news articles
-$sql = "SELECT id, title, summary, published_date FROM articles ORDER BY published_date DESC LIMIT 10";
-$result = $conn->query($sql);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,19 +44,11 @@ $result = $conn->query($sql);
         </div>
     </main>
     <img decoding="async" src="c:\Users\Acer\Downloads\news org img2.jpg" width = 1800; height = 1000; alt="news-image" id="news-img">
-    
-
-
-
-
-
-       
+   
+  
 
 <style>
-    
-       
-        
-        
+      
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #c3c3c3;
@@ -274,7 +248,7 @@ $result = $conn->query($sql);
   <div class="header-right">
   <nav class="header-nav">
     <a href="#" class="header-link">Login</a>
-    <a href="#" class="header-link header-link--button">Get 1 year for $50 USD</a>
+    <a href="#" class="header-link header-link--button">Get 1 year for LKR500 000 </a>
   </nav>
     <button class="header-menu-button">Menu</button>
     </div>
@@ -434,11 +408,57 @@ $result = $conn->query($sql);
     </div>
   </div>
 </main>
-
+<html>
+    <head>
+    <title>Welcome to news channel</title>
+    	<link rel="stylesheet" type="text/css" href="design/style.css">
+    </head>
+    <body>
+    
+    	<div class="container">
+    
+    		<div class="welcome">
+    			<h1>Latest news</h1>
+    			<p>Welcome to the demo news site. <em>We never stop until you are aware.</em></p>
+    		</div>
+    
+    		<div class="news-box">
+    
+    			<div class="news">
+    				<h2><a href="read-news.php?newsid=1">First news title here</a></h2>
+    				<p> This news short description will be displayed at this particular place. This news short description will be displayed at this particular place.</p>
+    				<span>published on Jan, 12th 2015 by zooboole</span>
+    			</div>
+    
+    			<div class="news">
+    				<h2><a href="read-news.php?newsid=2">Second news title here</a></h2>
+    				<p>This news short description will be displayed at this particular place. This news short description will be displayed at this particular place.</p>
+    				<span>published on November, 12th 2024 by vindya</span>
+    			</div>
+    
+    			<div class="news">
+    				<h2><a href="read-news.php?newsid=3">Thirst news title here</a></h2>
+    				<p>This news short description will be displayed at this particular place. This news short description will be displayed at this particular place.</p>
+    				<span>published on November, 12th 2024 by vindya</span>
+    			</div>
+    
+    			<div class="news">
+    				<h2><a href="read-news.php?newsid=4">Fourth news title here</a></h2>
+    				<p>This news short description will be displayed at this particular place. This news short description will be displayed at this particular place.</p>
+    				<span>published on November, 12th 2024 by vindya</span>
+    			</div>
+    
+    		</div>
+    
+    		<div class="footer">
+    			phpFInal.com © <?= date("Y") ?> - all rights reserved.
+    		</div>
+    
+    	</div>
+    </body>
+    </html>
 <style>
-*,
-*:after,
-*:before {
+ {
   box-sizing: border-box;
 }
 
@@ -495,7 +515,7 @@ img {
 
 .header-nav {
   display: none;
-  (min-width: 1200px) {
+  @media (min-width: 1200px) {
       display: block;
   }
 }
@@ -781,25 +801,25 @@ img {
 
 
 <?php
-// Include the header
-include('includes/header.php');
 
-// Simulated dynamic article data (In real applications, this data should be fetched from a database)
+include('FInal.php');
+
+
 $articles = [
 ['id' => 1, 'category' => 'Breaking News', 'title' => 'Earthquake Hits City', 'image' => 'earthquake.jpg', 'excerpt' => 'A powerful earthquake struck the city, causing widespread damage.'],
 ['id' => 2, 'category' => 'Tech', 'title' => 'New Smartphone Launched', 'image' => 'smartphone.jpg', 'excerpt' => 'A new smartphone model was unveiled with cutting-edge technology and features.'],
 ['id' => 3, 'category' => 'Sports', 'title' => 'Local Team Wins Championship', 'image' => 'sports.jpg', 'excerpt' => 'The local football team won the national championship in a thrilling final match.'],
-// Add more articles as needed
+
 ];
 
-// Get unique categories
+
 $categories = array_unique(array_column($articles, 'category'));
 
-// Render the homepage with categories and articles
+
 ?>
 
 <main class="home-page">
-<!-- Slider Section -->
+
 <section class="slider">
 <div class="slider-wrapper">
     <div class="slide">
@@ -836,7 +856,7 @@ $categories = array_unique(array_column($articles, 'category'));
             // Display articles based on category
             foreach ($articles as $article) {
                 if ($article['category'] == $category) {
-                    echo '<div class="final project">';
+                    echo '<div class="article">';
                     echo '<a href="article.php?id=' . $article['id'] . '">';
                     echo '<img src="assets/images/' . $article['image'] . '" alt="' . $article['title'] . '" class="article-image">';
                     echo '<h3>' . $article['title'] . '</h3>';
@@ -848,19 +868,19 @@ $categories = array_unique(array_column($articles, 'category'));
             ?>
         </div>
     </div>
-<?php finalproject; ?>
+<?php endforeach; ?>
 </section>
 </main>
 
 <?php
 // Include the footer
-include('includes/footer.php');
+include('FInal.php');
 ?>
 
 <div class="header-middle">
     <a href="#" class="header-link">Call Us (948) 348 981 872</a>
-    
-    <a href="#" class="header-link">vindiyanid@gmail.com</a>
+    <span>/</span>
+    <a href="#" class="header-link">vindiya@gmail.com</a>
   </div>
 
 
@@ -880,14 +900,12 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+
 <footer>
         <div class="container">
             <p>&copy; 2024 News Today. All rights reserved.</p>
         </div>
     </footer>
-
-
-
 </body>
 </html>
 
