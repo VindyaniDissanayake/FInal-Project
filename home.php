@@ -6,18 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Ludiflex | Login & Registration</title>
+    <title>News Website | Login & Registration</title>
 </head>
 <body>
-    <div class="wrapper">
-        <nav class="nav">
-            <div class="nav-logo">
-                <p>LOGO .</p>
-            </div>
-            <clipPath id="clip-fox-news-logo">
-                <rect width="233.445" height="52.805" />
-            </clipPath>
-              
+  
         <div class="nav-menu" id="navMenu">
             <ul>
                 <li><a href="#" class="link active">Home</a></li>
@@ -36,153 +28,454 @@
         </div>
     </nav>
     
-    
-    <main>
-        <div class="cards-container container flex" id="cards-container">
-    
-        </div>
-    </main>
-    <img decoding="async" src="c:\Users\Acer\Downloads\news org img2.jpg" width = 1800; height = 1000; alt="news-image" id="news-img">
-   
-    
+    <header class="header responsive-wrapper">
+      <div class="header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="233.445" height="52.805" viewBox="0 0 233.445 52.805">
+          <defs>
+            <clipPath id="clip-fox-news-logo">
+              <rect width="233.445" height="52.805" />
+            </clipPath>
+          <g id="fox-news-logo" clip-path="url(#clip-fox-news-logo)"></g>
+          </defs>
+        </svg>
+      </div>
+      </header>
+    <!-- carousel -->
+    <div class="carousel">
+      <!-- list item -->
+      <div class="list">
+          <div class="item">
+              <img src="image/img1.jpg">
+              <div class="content">
+                  <div class="author">NBS</div>
+                  <div class="title">NEWS WEBSITE</div>
+                  <div class="topic">NBC NEWS</div>
+                  <div class="des">
+                      <!-- lorem 50 -->
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                  </div>
+                  <div class="buttons">
+                      <button>SEE MORE</button>
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img2.jpg">
+              <div class="content">
+                  <div class="author">NBC</div>
+                  <div class="title">NEWS WEBSITE</div>
+                  <div class="topic">NBS NEWS</div>
+                  <div class="des">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                  </div>
+                  <div class="buttons">
+                      <button>SEE MORE</button>
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img3.jpg">
+              <div class="content">
+                  <div class="author">NBC</div>
+                  <div class="title">NEWS WEBSITE</div>
+                  <div class="topic">NBS NEWS</div>
+                  <div class="des">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                  </div>
+                  <div class="buttons">
+                      <button>SEE MORE</button>
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img4.jpg">
+              <div class="content">
+                  <div class="author">NBC</div>
+                  <div class="title">NEWS WEBSITE</div>
+                  <div class="topic">NBS NEWS</div>
+                  <div class="des">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                  </div>
+                  <div class="buttons">
+                      <button>SEE MORE</button>
+                      <button>SUBSCRIBE</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- list thumnail -->
+      <div class="thumbnail">
+          <div class="item">
+              <img src="image/img1.jpg">
+              <div class="content">
+                  <div class="title">
+                      Name Slider
+                  </div>
+                  <div class="description">
+                      Description
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img2.jpg">
+              <div class="content">
+                  <div class="title">
+                      Name Slider
+                  </div>
+                  <div class="description">
+                      Description
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img3.jpg">
+              <div class="content">
+                  <div class="title">
+                      Name Slider
+                  </div>
+                  <div class="description">
+                      Description
+                  </div>
+              </div>
+          </div>
+          <div class="item">
+              <img src="image/img4.jpg">
+              <div class="content">
+                  <div class="title">
+                      Name Slider
+                  </div>
+                  <div class="description">
+                      Description
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- next prev -->
 
+      <div class="arrows">
+          <button id="prev"></button>
+          <button id="next">></button>
+      </div>
+      <!-- time running -->
+      <div class="time"></div>
+  </div>
 
-<style>
-      body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #c3c3c3;
+  <script src="app.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body{
+        margin: 0;
+        background-color: #000;
+        color: #eee;
+        font-family: Poppins;
+        font-size: 12px;
+    }
+    a{
+        text-decoration: none;
+    }
+    header{
+        width: 1140px;
+        max-width: 80%;
+        margin: auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+    }
+    header a{
+        color: #eee;
+        margin-right: 40px;
+    }
+    /* carousel */
+    .carousel{
+        height: 100vh;
+        margin-top: -50px;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+    }
+    .carousel .list .item{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0 0 0 0;
+    }
+    .carousel .list .item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .carousel .list .item .content{
+        position: absolute;
+        top: 20%;
+        width: 1140px;
+        max-width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 30%;
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: 0 5px 10px #0004;
+    }
+    .carousel .list .item .author{
+        font-weight: bold;
+        letter-spacing: 10px;
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic{
+        font-size: 5em;
+        font-weight: bold;
+        line-height: 1.3em;
+    }
+    .carousel .list .item .topic{
+        color: #f1683a;
+    }
+    .carousel .list .item .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: 40px;
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .carousel .list .item .buttons button{
+        border: none;
+        background-color: #eee;
+        letter-spacing: 3px;
+        font-family: Poppins;
+        font-weight: 500;
+    }
+    .carousel .list .item .buttons button:nth-child(2){
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #eee;
+    }
+    /* thumbail */
+    .thumbnail{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        width: max-content;
+        z-index: 100;
+        display: flex;
+        gap: 20px;
+    }
+    .thumbnail .item{
+        width: 150px;
+        height: 220px;
+        flex-shrink: 0;
+        position: relative;
+    }
+    .thumbnail .item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .thumbnail .item .content{
+        color: #fff;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    .thumbnail .item .content .title{
+        font-weight: 500;
+    }
+    .thumbnail .item .content .description{
+        font-weight: 300;
+    }
+    /* arrows */
+    .arrows{
+        position: absolute;
+        top: 80%;
+        right: 52%;
+        z-index: 100;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .arrows button{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #eee4;
+        border: none;
+        color: #fff;
+        font-family: monospace;
+        font-weight: bold;
+        transition: .5s;
+    }
+    .arrows button:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    
+    /* animation */
+    .carousel .list .item:nth-child(1){
+        z-index: 1;
+    }
+    
+    /* animation text in first item */
+    
+    .carousel .list .item:nth-child(1) .content .author,
+    .carousel .list .item:nth-child(1) .content .title,
+    .carousel .list .item:nth-child(1) .content .topic,
+    .carousel .list .item:nth-child(1) .content .des,
+    .carousel .list .item:nth-child(1) .content .buttons
+    {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+        animation: showContent .5s 1s linear 1 forwards;
+    }
+    @keyframes showContent{
+        to{
+            transform: translateY(0px);
+            filter: blur(0px);
+            opacity: 1;
         }
-        
-        p {
-            font-family: "Roboto", sans-serif;
-            opacity: .8;
-            line-height: 1.4rem;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        .flex {
-            display: flex;
-            align-items: center;
-        }
-        
-        .container {
-            max-width: 1180px;
-            margin-inline: auto;
-            overflow: hidden;
-        }
-        
-        nav {
-            background-color: #484e52;
-            color: white;
-            position: fixed;
-            top: 0;
-            z-index: 99;
+    }
+    .carousel .list .item:nth-child(1) .content .title{
+        animation-delay: 1.2s!important;
+    }
+    .carousel .list .item:nth-child(1) .content .topic{
+        animation-delay: 1.4s!important;
+    }
+    .carousel .list .item:nth-child(1) .content .des{
+        animation-delay: 1.6s!important;
+    }
+    .carousel .list .item:nth-child(1) .content .buttons{
+        animation-delay: 1.8s!important;
+    }
+    /* create animation when next click */
+    .carousel.next .list .item:nth-child(1) img{
+        width: 150px;
+        height: 220px;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 30px;
+        animation: showImage .5s linear 1 forwards;
+    }
+    @keyframes showImage{
+        to{
+            bottom: 0;
             left: 0;
-            right: 0;
-        }
-        
-        .main-nav {
-            justify-content: space-between;
-            padding-block: 8px;
-        }
-        
-        
-        
-        .nav-links ul {
-            gap: 16px;
-        }
-        
-        .hover-link {
-            cursor: pointer;
-        }
-        
-        
-        .nav-item.active {
-            color: var(--accent-color);
-        }
-        
-        .search-bar {
-            height: 32px;
-            gap: 8px;
-        }
-        
-        .news-input {
-            width: 200px;
-            height: 100%;
-            padding-inline: 12px;
-            border-radius: 4px;
-            border: 2px solid #bbd0e2;
-            font-family: "Roboto", sans-serif;
-        }
-        
-        .search-button {
-            background-color: #208c5b;
-            color: white;
-            padding: 8px 24px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: "Roboto", sans-serif;
-        }
-        
-        
-        
-        main {
-            padding-block: 20px;
-            margin-top: 80px;
-        }
-        
-        .cards-container {
-            justify-content: space-between;
-            flex-wrap: wrap;
-            row-gap: 20px;
-            align-items: start;
-        }
-        
-        .card {
-            width: 360px;
-            min-height: 400px;
-            box-shadow: 0 0 4px #d4ecff;
-            border-radius: 4px;
-            cursor: pointer;
-            background-color: #fff;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            box-shadow: 1px 1px 8px #d4ecff;
-            background-color: #f9fdff;
-            transform: translateY(-2px);
-        }
-        
-        .card-header img {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            height: 100%;
+            border-radius: 0;
         }
-        
-        .card-content {
-            padding: 12px;
+    }
+    
+    .carousel.next .thumbnail .item:nth-last-child(1){
+        overflow: hidden;
+        animation: showThumbnail .5s linear 1 forwards;
+    }
+    .carousel.prev .list .item img{
+        z-index: 100;
+    }
+    @keyframes showThumbnail{
+        from{
+            width: 0;
+            opacity: 0;
         }
-        
-        .news-source {
-            margin-block: 12px;
-        
+    }
+    .carousel.next .thumbnail{
+        animation: effectNext .5s linear 1 forwards;
+    }
+    
+    @keyframes effectNext{
+        from{
+            transform: translateX(150px);
         }
-        
-        .hover-link:hover {
-            color: #b9b9b9;
-            text-decoration: underline;
+    }
+    
+    /* running time */
+    
+    .carousel .time{
+        position: absolute;
+        z-index: 1000;
+        width: 0%;
+        height: 3px;
+        background-color: #f1683a;
+        left: 0;
+        top: 0;
+    }
+    
+    .carousel.next .time,
+    .carousel.prev .time{
+        animation: runningTime 3s linear 1 forwards;
+    }
+    @keyframes runningTime{
+        from{ width: 100%}
+        to{width: 0}
+    }
+    
+    
+    /* prev click */
+    
+    .carousel.prev .list .item:nth-child(2){
+        z-index: 2;
+    }
+    
+    .carousel.prev .list .item:nth-child(2) img{
+        animation: outFrame 0.5s linear 1 forwards;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    @keyframes outFrame{
+        to{
+            width: 150px;
+            height: 220px;
+            bottom: 50px;
+            left: 50%;
+            border-radius: 20px;
         }
-    </style>
+    }
+    
+    .carousel.prev .thumbnail .item:nth-child(1){
+        overflow: hidden;
+        opacity: 0;
+        animation: showThumbnail .5s linear 1 forwards;
+    }
+    .carousel.next .arrows button,
+    .carousel.prev .arrows button{
+        pointer-events: none;
+    }
+    .carousel.prev .list .item:nth-child(2) .content .author,
+    .carousel.prev .list .item:nth-child(2) .content .title,
+    .carousel.prev .list .item:nth-child(2) .content .topic,
+    .carousel.prev .list .item:nth-child(2) .content .des,
+    .carousel.prev .list .item:nth-child(2) .content .buttons
+    {
+        animation: contentOut 1.5s linear 1 forwards!important;
+    }
+    
+    @keyframes contentOut{
+        to{
+            transform: translateY(-150px);
+            filter: blur(20px);
+            opacity: 0;
+        }
+    }
+    @media screen and (max-width: 678px) {
+        .carousel .list .item .content{
+            padding-right: 0;
+        }
+        .carousel .list .item .content .title{
+            font-size: 30px;
+        }
+    }
+  </style>
+
+
 <h1>Latest News</h1>
 
 <div class="news-item">
@@ -222,14 +515,7 @@
         </div>
     </div>
 
-<header class="header responsive-wrapper">
-  <div class="header-left">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="233.445" height="52.805" viewBox="0 0 233.445 52.805">
-      <defs>
-        <clipPath id="clip-fox-news-logo">
-          <rect width="233.445" height="52.805" />
-        </clipPath>
-      </defs>
+
       <g id="fox-news-logo" clip-path="url(#clip-fox-news-logo)">
         <g id="Group_1" data-name="Group 1" transform="translate(-2179.585 601.093)">
           <path id="Path_5" data-name="Path 5" d="M4.185-29.205H22.59v4.59H9.5v7.7h11.97v4.545H9.5V0H4.185Zm27.675,6.75a12.117,12.117,0,0,1,4.14.7,8.656,8.656,0,0,1,3.33,2.138q3.105,3.15,3.105,8.73,0,5.49-3.105,8.64A9.921,9.921,0,0,1,31.86.63,10.222,10.222,0,0,1,24.3-2.25Q21.2-5.355,21.2-10.89q0-5.625,3.105-8.73A10.217,10.217,0,0,1,31.86-22.455Zm5.265,11.52a8.372,8.372,0,0,0-1.35-5.2,4.5,4.5,0,0,0-3.757-1.733,5.013,5.013,0,0,0-3.937,1.733,7.654,7.654,0,0,0-1.53,5.2,8.27,8.27,0,0,0,1.372,5.2A4.534,4.534,0,0,0,31.68-4.005,4.989,4.989,0,0,0,35.6-5.738,7.654,7.654,0,0,0,37.125-10.935ZM64.62,0H58.14l-5.4-7.02L47.7,0H41.175l8.5-10.89-8.5-11.025H47.7l5.355,7.02,5.085-7.02h6.48L56.16-10.89ZM78.48-29.205l12.87,20.7v-20.7h5.31V0h-5.4L77.985-21.42V0h-5.31V-29.205Zm37.71,9.945a9.966,9.966,0,0,1,1.688,3.33,12.23,12.23,0,0,1,.563,3.465,20.182,20.182,0,0,1-.18,2.835H104.13a7.606,7.606,0,0,0,1.305,4.32,4.268,4.268,0,0,0,3.69,1.665q3.285,0,3.915-2.88H118.4A7.849,7.849,0,0,1,115.38-1.35,9.93,9.93,0,0,1,109.125.63a9.489,9.489,0,0,1-7.245-3.15,11.96,11.96,0,0,1-3.015-8.415,11.822,11.822,0,0,1,3.015-8.46,9.529,9.529,0,0,1,7.245-3.06A8.486,8.486,0,0,1,116.19-19.26Zm-7.02,1.035a4.385,4.385,0,0,0-3.51,1.463,6.578,6.578,0,0,0-1.485,3.758h9.315q0-3.555-2.25-4.77A4.4,4.4,0,0,0,109.17-18.225Zm13.455-3.645,4.41,15.615,4.185-14.4h4.815L140.22-6.21l4.455-15.66h5.31L142.785,0h-5.22l-4.05-13.1L129.555,0H124.29l-7.245-21.87Zm31.05,15.21q.09,3.105,4.545,3.1a4.934,4.934,0,0,0,2.813-.743,2.1,2.1,0,0,0,1.1-1.733,1.847,1.847,0,0,0-.675-1.53,6.639,6.639,0,0,0-2.115-.99l-4.77-1.71q-5.31-1.845-5.31-6.03a5.172,5.172,0,0,1,2.5-4.477,11.8,11.8,0,0,1,6.7-1.687,10.044,10.044,0,0,1,6.48,1.845,6,6,0,0,1,2.362,4.635h-4.995a2.191,2.191,0,0,0-1.035-1.71,4.856,4.856,0,0,0-2.7-.63,4.6,4.6,0,0,0-2.723.7,1.974,1.974,0,0,0-.967,1.6q0,1.575,2.655,2.34l5.175,1.935a10.264,10.264,0,0,1,3.938,2.182A4.576,4.576,0,0,1,168.03-6.12a5.8,5.8,0,0,1-2.565,4.68,11.1,11.1,0,0,1-7.02,2.07,11.753,11.753,0,0,1-7.02-1.913,6.353,6.353,0,0,1-2.7-5.377Z" transform="translate(2245 -561)" />
@@ -442,13 +728,8 @@
     
     		</div>
     
-    		<div class="footer">
-    			phphome.com © <?= date("Y") ?> - all rights reserved.
-    		</div>
     
-    	</div>
-    </body>
-    </html>
+    
 <style>
  {
   box-sizing: border-box;
@@ -766,6 +1047,7 @@ img {
 :focus {
   outline: 0;
 }
+
 </style>
 <div class="card">
     <div class="card-header">
