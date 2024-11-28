@@ -1,28 +1,28 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final project</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .news-article { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc; }
-        .title { font-size: 1.5em; }
-        .summary { font-size: 1em; }
-        .date { font-size: 0.8em; color: #999; }
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Ludiflex | Login & Registration</title>
+</head>
     </style>
 </head>
 <body>
-    <nav>
-        <div class="main-nav container flex">
-    
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>LOGO .</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
             <div class="nav-links">
                 <ul class="flex">
+                    <li class="hover-link nav-item" id="home">HOME</li>
                     <li class="hover-link nav-item" id="finance">FINANCE</li>
                     <li class="hover-link nav-item" id="sports">SPORTS</li>
-                    <li class="hover-link nav-item" id="crypto">CRYPTO</li>
                     <li class="hover-link nav-item" id="international"> INTERNATIONAL</li>
                     <li class="hover-link nav-item" id="education">EDUCATION</li>
                     <li class="hover-link nav-item" id="about us">ABOUT US</li>
@@ -45,11 +45,11 @@
     </main>
     <img decoding="async" src="c:\Users\Acer\Downloads\news org img2.jpg" width = 1800; height = 1000; alt="news-image" id="news-img">
    
-  
+    
+
 
 <style>
-      
-        body {
+      body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #c3c3c3;
         }
@@ -183,7 +183,6 @@
             color: #b9b9b9;
             text-decoration: underline;
         }
-        
     </style>
 <h1>Latest News</h1>
 
@@ -245,13 +244,7 @@
     </svg>
   </div>
   
-  <div class="header-right">
-  <nav class="header-nav">
-    <a href="#" class="header-link">Login</a>
-    <a href="#" class="header-link header-link--button">Get 1 year for LKR500 000 </a>
-  </nav>
-    <button class="header-menu-button">Menu</button>
-    </div>
+  
 </header>
 <main class="responsive-wrapper">
   <div class="page-title">
@@ -451,7 +444,7 @@
     		</div>
     
     		<div class="footer">
-    			phpFInal.com © <?= date("Y") ?> - all rights reserved.
+    			phphome.com © <?= date("Y") ?> - all rights reserved.
     		</div>
     
     	</div>
@@ -874,7 +867,7 @@ $categories = array_unique(array_column($articles, 'category'));
 
 <?php
 // Include the footer
-include('FInal.php');
+include('Final.php');
 ?>
 
 <div class="header-middle">
