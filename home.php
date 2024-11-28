@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>News Website | Login & Registration</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>News | Login & Registration</title>
 </head>
 <body>
   
@@ -18,9 +18,10 @@
                 <li><a href="#" class="link active">Education</a></li>
                 <li><a href="#" class="link active">Sport</a></li>
                 <li><a href="#" class="link active">Services</a></li>
-                <li><a href="#" class="link active">About</a></li>
+                <li><a href="#" class="link active">About Us</a></li>
                 <li><a href="#" class="link active">Privancy Police</a></li>
             </ul>
+
 <div class="search-bar flex">
     
                 <button id="search-button" class="search-button">Search</button>

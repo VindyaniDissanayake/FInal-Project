@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Ludiflex | Login & Registration</title>
+    <title>News | Login & Registration</title>
 </head>
 <body>
- <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <p>LOGO .</p>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="#" class="link active">Home</a></li>
-                <li><a href="#" class="link active">Finance</a></li>
-                <li><a href="#" class="link">Blog</a></li>
-                <li><a href="#" class="link active">Education</a></li>
-                <li><a href="#" class="link active">Sport</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">About</a></li>
-                <li><a href="#" class="link active">Privancy Police</a></li>
-            </ul>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>LOGO .</p>
+            </div>
+            <clipPath id="clip-fox-news-logo">
+                <rect width="233.445" height="52.805" />
+            </clipPath>
+              
+       
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <li><a href="#" class="link active">Finance</a></li>
+                    <li><a href="#" class="link activ">Blog</a></li>
+                    <li><a href="#" class="link active">Education</a></li>
+                    <li><a href="#" class="link active">Sport</a></li>
+                    <li><a href="#" class="link active">Services</a></li>
+                    <li><a href="#" class="link active">About Us</a></li>
+                    <li><a href="#" class="link active">Privancy Police</a></li>
+                </ul>
         </div>
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
@@ -42,7 +47,7 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                
                 <header>Login</header>
             </div>
             <div class="input-box">
@@ -107,8 +112,7 @@
     </div>
 </div>   
 <style>
-/* POPPINS FONT */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 
 *{  
     margin: 0;
@@ -117,7 +121,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("images/1.jpg");
+    background: url("https://i.ytimg.com/vi/HhqpwxRn3CY/maxresdefault.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
