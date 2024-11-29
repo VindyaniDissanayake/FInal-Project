@@ -1,453 +1,2637 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>News | Login & Registration</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="">HOME</a>
-            <a href="">ABOUT US</a>
-            <a href="">INFO</a>
-        </nav>
-    </header>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
-    margin: 0;
-    background-color: #000;
-    color: #eee;
-    font-family: Poppins;
-    font-size: 12px;
-}
-a{
-    text-decoration: none;
-}
-header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-header a{
-    color: #eee;
-    margin-right: 40px;
-}
-/* carousel */
-.carousel{
-    height: 100vh;
-    margin-top: -50px;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-}
-.carousel .list .item{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0 0 0 0;
-}
-.carousel .list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.carousel .list .item .content{
-    position: absolute;
-    top: 20%;
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 30%;
-    box-sizing: border-box;
-    color: #fff;
-    text-shadow: 0 5px 10px #0004;
-}
-.carousel .list .item .author{
-    font-weight: bold;
-    letter-spacing: 10px;
-}
-.carousel .list .item .title,
-.carousel .list .item .topic{
-    font-size: 5em;
-    font-weight: bold;
-    line-height: 1.3em;
-}
-.carousel .list .item .topic{
-    color: #f1683a;
-}
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
-}
-.carousel .list .item .buttons button:nth-child(2){
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #eee;
-}
-/* thumbail */
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    width: max-content;
-    z-index: 100;
-    display: flex;
-    gap: 20px;
-}
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    flex-shrink: 0;
-    position: relative;
-}
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.thumbnail .item .content{
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-}
-.thumbnail .item .content .title{
-    font-weight: 500;
-}
-.thumbnail .item .content .description{
-    font-weight: 300;
-}
-/* arrows */
-.arrows{
-    position: absolute;
-    top: 80%;
-    right: 52%;
-    z-index: 100;
-    width: 300px;
-    max-width: 30%;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-.arrows button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #eee4;
-    border: none;
-    color: #fff;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .5s;
-}
-.arrows button:hover{
-    background-color: #fff;
-    color: #000;
-}
+  
+      <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link active">Finance</a></li>
+                <li><a href="#" class="link activ">Blog</a></li>
+                <li><a href="#" class="link active">Education</a></li>
+                <li><a href="#" class="link active">Sport</a></li>
+                <li><a href="#" class="link active">Services</a></li>
+                <li><a href="#" class="link active">About Us</a></li>
+                <li><a href="#" class="link active">Privancy Police</a></li>
+            </ul>
 
-/* animation */
-.carousel .list .item:nth-child(1){
-    z-index: 1;
-}
-
-/* animation text in first item */
-
-.carousel .list .item:nth-child(1) .content .author,
-.carousel .list .item:nth-child(1) .content .title,
-.carousel .list .item:nth-child(1) .content .topic,
-.carousel .list .item:nth-child(1) .content .des,
-.carousel .list .item:nth-child(1) .content .buttons
-{
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent .5s 1s linear 1 forwards;
-}
-@keyframes showContent{
-    to{
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-.carousel .list .item:nth-child(1) .content .title{
-    animation-delay: 1.2s!important;
-}
-.carousel .list .item:nth-child(1) .content .topic{
-    animation-delay: 1.4s!important;
-}
-.carousel .list .item:nth-child(1) .content .des{
-    animation-delay: 1.6s!important;
-}
-.carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.8s!important;
-}
-/* create animation when next click */
-.carousel.next .list .item:nth-child(1) img{
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    border-radius: 30px;
-    animation: showImage .5s linear 1 forwards;
-}
-@keyframes showImage{
-    to{
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-}
-
-.carousel.next .thumbnail .item:nth-last-child(1){
-    overflow: hidden;
-    animation: showThumbnail .5s linear 1 forwards;
-}
-.carousel.prev .list .item img{
-    z-index: 100;
-}
-@keyframes showThumbnail{
-    from{
-        width: 0;
-        opacity: 0;
-    }
-}
-.carousel.next .thumbnail{
-    animation: effectNext .5s linear 1 forwards;
-}
-
-@keyframes effectNext{
-    from{
-        transform: translateX(150px);
-    }
-}
-
-/* running time */
-
-.carousel .time{
-    position: absolute;
-    z-index: 1000;
-    width: 0%;
-    height: 3px;
-    background-color: #f1683a;
-    left: 0;
-    top: 0;
-}
-
-.carousel.next .time,
-.carousel.prev .time{
-    animation: runningTime 3s linear 1 forwards;
-}
-@keyframes runningTime{
-    from{ width: 100%}
-    to{width: 0}
-}
-
-
-/* prev click */
-
-.carousel.prev .list .item:nth-child(2){
-    z-index: 2;
-}
-
-.carousel.prev .list .item:nth-child(2) img{
-    animation: outFrame 0.5s linear 1 forwards;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-@keyframes outFrame{
-    to{
-        width: 150px;
-        height: 220px;
-        bottom: 50px;
-        left: 50%;
-        border-radius: 20px;
-    }
-}
-
-.carousel.prev .thumbnail .item:nth-child(1){
-    overflow: hidden;
-    opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
-}
-.carousel.next .arrows button,
-.carousel.prev .arrows button{
-    pointer-events: none;
-}
-.carousel.prev .list .item:nth-child(2) .content .author,
-.carousel.prev .list .item:nth-child(2) .content .title,
-.carousel.prev .list .item:nth-child(2) .content .topic,
-.carousel.prev .list .item:nth-child(2) .content .des,
-.carousel.prev .list .item:nth-child(2) .content .buttons
-{
-    animation: contentOut 1.5s linear 1 forwards!important;
-}
-
-@keyframes contentOut{
-    to{
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
-    }
-}
-@media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-    }
-    .carousel .list .item .content .title{
-        font-size: 30px;
-    }
-}
-</style>
-    <!-- carousel -->
-    <div class="carousel">
-        <!-- list item -->
-        <div class="list">
-            <div class="item">
-                <img src="image/img1.jpg">
-                <div class="content">
-                    <div class="author">WELCOME</div>
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">NEWS</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img2.jpg">
-                <div class="content">
-                    <div class="author">LUNDEV</div>
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img3.jpg">
-                <div class="content">
-                    <div class="author">LUNDEV</div>
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img4.jpg">
-                <div class="content">
-                    <div class="author">LUNDEV</div>
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
-                    <div class="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
-                </div>
+               <div class="search-bar flex">
+    
+                <button id="search-button" class="search-button">Search</button>
             </div>
         </div>
-        <!-- list thumnail -->
-        <div class="thumbnail">
-            <div class="item">
-                <img src="image/img1.jpg">
-                <div class="content">
-                    <div class="title">
-                        Name Slider
-                    </div>
-                    <div class="description">
-                        Description
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img2.jpg">
-                <div class="content">
-                    <div class="title">
-                        Name Slider
-                    </div>
-                    <div class="description">
-                        Description
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img3.jpg">
-                <div class="content">
-                    <div class="title">
-                        Name Slider
-                    </div>
-                    <div class="description">
-                        Description
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="image/img4.jpg">
-                <div class="content">
-                    <div class="title">
-                        Name Slider
-                    </div>
-                    <div class="description">
-                        Description
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- next prev -->
+    </nav>
+  
 
-        <div class="arrows">
-            <button id="prev"></button>
-            <button id="next">></button>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Typenote — W3.CSS: Jane Bloglife">
+  <meta name="keywords"    content="typenote, w3css, templates, jane, bloglife">
+  <meta name="author"      content="Gurov Dmitriy">
+  <meta name="robots"      content="noindex, follow">
+
+  <link rel="preload" href="font/woff2/Oswald-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
+  <link rel="preload" href="css/style.css"                                    as="style">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+
+
+  <script>document.createElement("picture");</script>
+
+  <script src="js/webp.js"        async></script>
+  <script src="js/picturefill.js" async></script>
+  <!--   <script src="js/lazysizes.js"   async></script> -->
+
+</head>
+
+<body class="w3-light-grey w3css-jane-bloglife">
+
+  <header>
+
+    <h1 class="visually-hidden">NBC NEWS</h1>
+
+    <a class="skip-link" href="#main">skip-link</a>
+
+   
+
+      <a class="w3-bar-item w3-button w3-right" href="#"><span class="visually-hidden">search</span><span class="fa fa-search"></span></a>
+    </nav>
+
+    <div class="w3-content">
+
+      <div class="w3-container w3-padding-32 w3-white w3-center">
+        <p class="w3-xxxlarge usr-main-caption" tabindex="0">NBC NEWS</p>
+        <p class="w3-large">Welcome to the news of <span class="w3-tag">World News</span></p>
+      </div>
+
+      <div class="w3-display-container usr-main-photo">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/jane.webp">
+
+          <img class="w3-image" src="image/jane.jpg" width="1600" height="1060" loading="lazy" alt="Jane photo">
+        </picture>
+        <div class="w3-display-left w3-padding-large w3-text-white usr-main-photo-caption">
+          <p class="w3-xxlarge w3-wide">NBC</p>
+          <p class="w3-hide-small w3-jumbo">NBC NEWS/p>
+          <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off usr-modal-btn" type="button">Subscribe</button>
         </div>
-        <!-- time running -->
-        <div class="time"></div>
+      </div>
+
+      <div class="w3-modal">
+        <div class="w3-modal-content  w3-display-container w3-animate-top">
+
+          <button class="w3-button w3-display-topright w3-black w3-large usr-modal-btn-close">
+            <span class="visually-hidden">Close</span>
+            <span class="fa fa-remove"></span>
+          </button>
+
+          <div class="w3-container w3-black w3-padding-large w3-center">
+            <h3 tabindex="0">Subscribe</h3>
+          </div>
+          <p class="w3-container w3-padding-large">Join my mailing list to receive updates on the latest blog posts and other things.</p>
+
+          <form action="#" method="post">
+            <label class="visually-hidden" for="email">Enter e-mail</label>
+            <div class="w3-container w3-padding-large">
+              <input class="w3-input w3-border" id="email" type="email" name="email" placeholder="Enter e-mail" required>
+            </div>
+
+           
+
+          </form>
+
+        </div>
+      </div>
+
     </div>
 
-    <script src="app.js"></script>
+  </header>
+
+  <main class="w3-content" id="main">
+
+    <div class="w3-row w3-padding-64">
+
+      <div class="w3-col l8 w3-container">
+
+        <article class="w3-white w3-margin-bottom">
+          <div class="w3-container">
+
+            <header class="w3-padding-16 w3-center">
+              <h2 tabindex="0">Title heading</h2>
+              <p>Title description, <time class="w3-text-grey">2020-09-15 9:15</time></p>
+            </header>
+
+            <picture>
+              <source type="image/webp"
+                      srcset="image/girl_hat.webp">
+
+              <img class="w3-image" src="image/girl_hat.jpg" width="600" height="395" loading="lazy" alt="Girl hat">
+            </picture>
+
+            <p>Black lives matter NGO, greenwashing energize, B-corp replicable fairness. Catalyze social return on investment impact investing we must stand up efficient grit. Incubator, black lives matter challenges and opportunities citizen-centered outcomes. Program area, thought provoking thought partnership sustainable relief strategy impact social return on investment. Cultivate, movements, a progress social.</p>
+            <p>Inspire thought partnership challenges and opportunities change-makers green space LGBTQ+ B-corp inspire. Thought partnership; mass incarceration collaborative consumption milestones systems.</p>
+
+            <div class="w3-bar w3-padding-16">
+              <button class="w3-bar-item w3-button w3-mobile w3-white w3-border"><span class="w3-margin-right fa fa-thumbs-up"></span> <span>Like</span></button>
+              <button class="w3-bar-item w3-button w3-mobile w3-right w3-black usr-repl-btn"><span class="w3-margin-right">Replies</span> <span class="w3-tag w3-white">1</span></button>
+            </div>
+            <hr>
+
+            <div class="usr-repl-modal">
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/avatar_smoke.webp">
+
+                    <img class="w3-image usr-avatar" src="image/avatar_smoke.jpg" width="200" height="223" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">George </span><time class="w3-small w3-text-grey">2020-09-15 9:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="w3-white w3-margin-bottom">
+          <div class="w3-container">
+
+            <header class="w3-padding-16 w3-center">
+              <h2 tabindex="0">Title heading</h2>
+              <p>Title description, <time class="w3-text-grey">2020-09-15 9:15</time></p>
+            </header>
+
+            <picture>
+              <source type="image/webp"
+                      srcset="image/man_hat.webp">
+
+              <img class="w3-image" src="image/man_hat.jpg" width="600" height="395" loading="lazy" alt="Girl hat">
+            </picture>
+
+            <p>Contextualize improve the world resist academic invest dynamic or. Agile; because external partners, design thinking compelling strengthening infrastructure program area replicable. Program areas game-changer and social capital program area impact. Expose the truth save the world because B-corp silo energize incubator. Invest resilient external partners mass incarceration; but engaging initiative.</p>
+            <p>State of play global inspirational collective impact social return on investment. Technology, LGBTQ+, shared vocabulary framework shared vocabulary. Engaging outcomes.</p>
+
+            <div class="w3-bar w3-padding-16">
+              <button class="w3-bar-item w3-button w3-mobile w3-white w3-border"><span class="w3-margin-right fa fa-thumbs-up"></span> <span>Like</span></button>
+              <button class="w3-bar-item w3-button w3-mobile w3-right w3-black usr-repl-btn"><span class="w3-margin-right">Replies</span> <span class="w3-tag w3-white">2</span></button>
+            </div>
+            <hr>
+
+            <div class="usr-repl-modal usr-hidden">
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/girl_train.webp">
+
+                    <img class="w3-image usr-avatar" src="image/girl_train.jpg" width="500" height="600" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">vINDYA </span><time class="w3-small w3-text-grey">2024-11-25 7:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/girl.webp">
+
+                    <img class="w3-image usr-avatar" src="image/girl.jpg" width="500" height="600" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">Mary </span><time class="w3-small w3-text-grey">2024-11-29 9:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="w3-white w3-margin-bottom">
+          <div class="w3-container">
+
+            <header class="w3-padding-16 w3-center">
+              <h2 tabindex="0">Title heading</h2>
+              <p>Title description, <time class="w3-text-grey">2024-</time></p>
+            </header>
+
+            <picture>
+              <source type="image/webp"
+                      srcset="image/runway.webp">
+
+              <img class="w3-image" src="image/runway.jpg" width="600" height="395" loading="lazy" alt="Girl hat">
+            </picture>
+
+            <p>Milestones when impact, ecosystem progress. External partners, sustainable expose the truth compelling a we must stand up disrupt. Deep dive humanitarian replicable thought provoking, revolutionary low-hanging fruit effective altruism academic revolutionary. Strategy synergy effective altruism or, grit engaging, resilient triple bottom line. Capacity building communities rubric incubator thought partnership philanthropy.</p>
+            <p>Inclusive greenwashing; program area to collaborate thought partnership. Transparent improve the world, indicators; LGBTQ+ parse families synergy. Game-changer families society.</p>
+
+            <div class="w3-bar w3-padding-16">
+              <button class="w3-bar-item w3-button w3-mobile w3-white w3-border"><span class="w3-margin-right fa fa-thumbs-up"></span> <span>Like</span></button>
+              <button class="w3-bar-item w3-button w3-mobile w3-right w3-black usr-repl-btn"><span class="w3-margin-right">Replies</span> <span class="w3-tag w3-white">3</span></button>
+            </div>
+            <hr>
+
+            <div class="usr-repl-modal usr-hidden">
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/girl_mountain.webp">
+
+                    <img class="w3-image usr-avatar" src="image/girl_mountain.jpg" width="500" height="600" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">Anna </span><time class="w3-small w3-text-grey">2024-11-27 9:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/boy.webp">
+
+                    <img class="w3-image usr-avatar" src="image/boy.jpg" width="500" height="600" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">Mark </span><time class="w3-small w3-text-grey">2020-09-15 9:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+                  <picture>
+                    <source type="image/webp"
+                            srcset="image/girl_hood.webp">
+
+                    <img class="w3-image usr-avatar" src="image/girl_hood.jpg" width="500" height="600" loading="lazy" alt="Avatar">
+                  </picture>
+                </div>
+
+                <div class="w3-col m9">
+                  <p><span class="w3-large">Demi </span><time class="w3-small w3-text-grey">2020-09-15 9:15</time></p>
+                  <p>Great blog post! Following</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <aside class="w3-col l4 w3-container">
+        <h2 class="visually-hidden">Other News</h2>
+
+        <section class="w3-margin-bottom">
+          <h2 class="visually-hidden">Profile</h2>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/avatar_girl2.webp">
+
+            <img class="w3-image w3-grayscale" src="image/avatar_girl2.jpg" width="300" height="160" loading="lazy" alt="Avatar">
+          </picture>
+          <div class="w3-container w3-black">
+            <h3 tabindex="0">My name</h3>
+            <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          </div>
+        </section>
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Popular Posts</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
+            <li>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/avatar_smoke.jpg" width="200" height="223" loading="lazy" alt="man smoke">
+                </picture>
+                <h3>Denim</h3>
+                <p>Sed mattis nunc</p>
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/bandmember.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/bandmember.jpg" width="255" height="255" loading="lazy" alt="man smoke">
+                </picture>
+                <h3>Sweaters</h3>
+                <p>Praes tinci sed</p>
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/workshop.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/workshop.jpg" width="300" height="300" loading="lazy" alt="worksho">
+                </picture>
+                <h3>Workshop</h3>
+                <p>Ultricies congue</p>
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/avatar_smoke.jpg" width="200" height="223" loading="lazy" alt="man smoke">
+                </picture>
+                <h3>Trends</h3>
+                <p>External strategize</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="w3-white w3-margin-bottom usr-ads">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Advertise</h2>
+          </div>
+          <div class="w3-container">
+            <div class="w3-container w3-display-container w3-section w3-light-grey">
+              <span class="w3-display-middle">Your AD Here</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="w3-white w3-margin-bottom">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Tag</h2>
+          </div>
+          <div class="w3-container w3-padding-16">
+            <div>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-black">Fashion</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">New York</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">London</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Hats</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Norway</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Sweaters</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Ideas</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Deals</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Accessories</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">News</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Clothing</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Shopping</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Jeans</button>
+              <button class="w3-button w3-small w3-margin-right w3-margin-bottom w3-light-grey">Trends</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="w3-margin-bottom w3-white usr-inspiration">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Inspiration</h2>
+          </div>
+          <div class="usr-inspiration-box">
+            <div class="w3-row-padding">
+              <div class="w3-col m6">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/jeans.webp">
+
+                  <img class="" src="image/jeans.jpg" width="1200" height="800" loading="lazy" alt="Logo">
+                </picture>
+              </div>
+              <div class="w3-col m6">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/team4.webp">
+
+                  <img class="" src="image/team4.jpg" width="500" height="333" loading="lazy" alt="Logo">
+                </picture>
+              </div>
+            </div>
+            <div class="w3-row-padding">
+              <div class="w3-col m6">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/team1.webp">
+
+                  <img class="w3-image" src="image/team1.jpg" width="500" height="333" loading="lazy" alt="Logo">
+                </picture>
+              </div>
+              <div class="w3-col m6">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/avatar_hat.webp">
+
+                  <img class="w3-image" src="image/avatar_hat.jpg" width="500" height="333" loading="lazy" alt="Logo">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Follow Me</h2>
+          </div>
+          <div class="w3-bar w3-large">
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">Facebook</span><span class="fa fa-facebook-official"></span></a>
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">Instagram</span><span class="fa fa-instagram"></span></a>
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">snap chat</span><span class="fa fa-snapchat"></span></a>
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">flicker</span><span class="fa fa-flickr"></span></a>
+            <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">LinkedIn</span><span class="fa fa-linkedin"></span></a>
+          </div>
+        </section>
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Subscribe</h2>
+          </div>
+          <div class="w3-container">
+            <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+            <form action="#" method="post">
+              <label class="visually-hidden" for="email-2">Enter e-mail</label>
+              <div class="w3-padding-16">
+                <input class="w3-input w3-border" id="email-2" type="email" name="email-2" placeholder="Enter e-mail" required>
+              </div>
+              <footer class="w3-padding-16">
+                <button class="w3-button w3-block w3-red" type="submit">Subscribe</button>
+              </footer>
+            </form>
+          </div>
+        </section>
+
+      </aside>
+
+    </div>
+
+    <div class="w3-container w3-padding-32">
+      <a class="w3-button w3-mobile w3-black" href="#"><span class="fa fa-arrow-up w3-margin-right"></span> To the top</a>
+    </div>
+
+  </main>
+
+  <footer class="w3-container w3-padding-32 w3-center w3-black">
+
+    <h2 class="visually-hidden">Contacts</h2>
+
+    <p>Go to <a href="index.html">Main</a></p>
+
+    <p>Create by <a href="https://www.typenote.io">Typenote</a></p>
+
+    <p>Powered by <a href="https://www.w3schools.com/w3css/">W3.CSS</a></p>
+
+  </footer>
+
+  <script src="js/default.js"        async></script>
+  <script src="js/janeblog.js"       async></script>
+  <script src="js/focus-visible.js"  async></script>
+  <style>
+  /*@import 'global/normalize.less';*/
+@font-face {
+  font-family: 'Oswald';
+  src: url('../font/woff2/Oswald-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff/Oswald-VariableFont_wght.woff') format('woff-variations');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('../font/woff2/Raleway-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff/Raleway-VariableFont_wght.woff') format('woff-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../font/woff2/Montserrat-Regular.woff2') format('woff2');
+  src: url('../font/woff/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../font/woff2/Montserrat-Bold.woff2') format('woff2');
+  src: url('../font/woff/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../font/woff2/OpenSans-Regular.woff2') format('woff2');
+  src: url('../font/woff/OpenSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../font/woff2/OpenSans-Bold.woff2') format('woff2');
+  src: url('../font/woff/OpenSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../font/woff2/Poppins-Regular.woff2') format('woff2');
+  src: url('../font/woff/Poppins-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../font/woff2/Poppins-Bold.woff2') format('woff2');
+  src: url('../font/woff/Poppins-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/woff2/Lato-Regular.woff2') format('woff2');
+  src: url('../font/woff/Lato-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/woff2/Lato-Bold.woff2') format('woff2');
+  src: url('../font/woff/Lato-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* переменные css */
+:root {
+  /* переменные цвета */
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+  --colorBlack2: #222222;
+  --colorGrey: #757575;
+  --colorRed: #f44336;
+  --colorGreen: #4CAF50;
+  --colorOverlay: rgba(0, 0, 0, 0.8);
+}
+/* переменные less */
+/* переменные вьюпорта */
+/* центровщик */
+/* переменные плотности экрана */
+/* центровщик контента */
+/* кастомный фокус */
+/* параметры текста mibile */
+/* параметры текста tablet */
+/* параметры текста desktop */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 600px;
+  height: 100vh;
+  min-width: 280px;
+}
+/* только для скринридера */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+button:hover {
+  cursor: pointer;
+}
+/* настройки кастомного фокуса */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+.js-focus-visible .focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
+.js-focus-visible footer .focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible button.focus-visible {
+  outline-offset: 2px;
+}
+/* сслыка пропуска меню */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 10px;
+  color: var(--colorWhite);
+  background-color: var(--colorBlack);
+}
+.skip-link:focus {
+  top: 0;
+}
+/*standart tag*/
+figure {
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+footer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.usr-show {
+  display: block;
+}
+.usr-hidden {
+  display: none;
+}
+.usr-main-page ul {
+  list-style: none;
+  padding: 0;
+}
+.usr-main-page ul a {
+  text-decoration: none;
+}
+/*burger*/
+.usr-burger {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  z-index: 10;
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+          box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+  /*  border-bottom: 2px solid var(--colorBlack);*/
+  background-color: transparent;
+}
+.usr-burger::before,
+.usr-burger::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--colorBlack);
+}
+.usr-burger::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.usr-burger::after {
+  top: 50%;
+  right: 0;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.usr-burger--open {
+  -webkit-animation-name: burgerOpen;
+          animation-name: burgerOpen;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.usr-burger--open::after {
+  -webkit-animation-name: burgerAfterOpen;
+          animation-name: burgerAfterOpen;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.usr-burger--open::before {
+  -webkit-animation-name: burgerBeforeOpen;
+          animation-name: burgerBeforeOpen;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.usr-burger--close {
+  -webkit-animation-name: burgerClose;
+          animation-name: burgerClose;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.usr-burger--close::after {
+  -webkit-animation-name: burgerAfterClose;
+          animation-name: burgerAfterClose;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.usr-burger--close::before {
+  -webkit-animation-name: burgerBeforeClose;
+          animation-name: burgerBeforeClose;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes burgerOpen {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpen {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerAfterOpen {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerAfterOpen {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerBeforeOpen {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerBeforeOpen {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerClose {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerClose {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerAfterClose {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerAfterClose {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerBeforeClose {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerBeforeClose {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+.w3css-gourment-catering header {
+  padding-top: 76px;
+}
+@media (min-width: 601px) {
+  .w3css-gourment-catering header {
+    padding-top: 54px;
+  }
+}
+.w3css-gourment-catering .usr-menu {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .w3css-gourment-catering .usr-menu {
+    display: block;
+    width: auto;
+  }
+}
+.w3css-gourment-catering img {
+  width: 100%;
+  height: auto;
+}
+.w3css-gourment-catering .usr-main-image {
+  max-width: 1600px;
+}
+.w3css-gourment-catering address {
+  font-style: normal;
+}
+.w3css-gourment-catering .usr-navbrand {
+  width: 130px;
+}
+@media (min-width: 601px) {
+  .w3css-gourment-catering .usr-navbrand {
+    width: auto;
+  }
+}
+.js-focus-visible .w3css-gourment-catering footer .focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
+.w3css-architect header {
+  padding-top: 54px;
+}
+.w3css-architect .usr-burger {
+  top: 17px;
+}
+.w3css-architect .usr-menu {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .w3css-architect .usr-menu {
+    width: auto;
+  }
+}
+@media (min-width: 601px) {
+  .w3css-architect .usr-hidden {
+    display: block;
+  }
+}
+.w3css-architect img {
+  width: 100%;
+  height: auto;
+}
+.w3css-architect .w3-content {
+  max-width: 1500px;
+}
+.w3css-architect main.w3-content {
+  max-width: 1532px;
+}
+.w3css-architect .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-architect .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-architect .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-architect .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-architect .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-architect .usr-gallery__overlay--hidden {
+  display: none;
+}
+.js-focus-visible .w3css-architect .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+body.w3css-jane-bloglife {
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 400;
+}
+body.w3css-jane-bloglife h1,
+body.w3css-jane-bloglife h2,
+body.w3css-jane-bloglife h3,
+body.w3css-jane-bloglife .usr-main-caption,
+body.w3css-jane-bloglife .usr-main-caption + p,
+body.w3css-jane-bloglife .usr-main-photo-caption {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+body.w3css-jane-bloglife .usr-main-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.w3css-jane-bloglife img {
+  width: 100%;
+  height: auto;
+}
+.w3css-jane-bloglife ul a {
+  text-decoration: none;
+}
+.w3css-jane-bloglife ul h3,
+.w3css-jane-bloglife ul p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.w3css-jane-bloglife .w3-content {
+  max-width: 1600px;
+}
+.w3css-jane-bloglife .usr-main-photo p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.w3css-jane-bloglife .usr-main-photo p:nth-child(2) {
+  text-transform: uppercase;
+}
+.w3css-jane-bloglife .usr-avatar {
+  width: 90px;
+  height: auto;
+}
+.w3css-jane-bloglife .usr-avatar-min {
+  width: 50px;
+  height: auto;
+}
+.w3css-jane-bloglife .usr-inspiration .usr-inspiration-box {
+  padding-top: 16px;
+}
+.w3css-jane-bloglife .w3-button.w3-mobile {
+  margin-bottom: 16px;
+}
+.w3css-jane-bloglife .w3-button.w3-mobile:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 601px) {
+  .w3css-jane-bloglife .w3-button.w3-mobile {
+    margin-bottom: 0;
+  }
+}
+.w3css-jane-bloglife .usr-inspiration .w3-col {
+  margin-bottom: 16px;
+}
+.w3css-jane-bloglife main.w3-content {
+  max-width: 1632px;
+}
+.w3css-jane-bloglife .usr-ads .w3-display-container {
+  min-height: 200px;
+}
+.w3css-jane-bloglife .usr-main-photo button,
+.w3css-jane-bloglife header h3 {
+  text-transform: uppercase;
+}
+.js-focus-visible .w3css-jane-bloglife .focus-visible {
+  outline: 2px solid var(--colorRed);
+}
+.js-focus-visible .w3css-jane-bloglife .w3-bar .focus-visible {
+  outline-offset: -2px;
+}
+body.w3css-photolio {
+  font-family: 'Montserrat', sans-serif;
+}
+.w3css-photolio h1 {
+  text-transform: uppercase;
+}
+.w3css-photolio ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.w3css-photolio .usr-nav-box {
+  min-height: 52px;
+  margin: 0 auto;
+}
+.w3css-photolio nav {
+  width: 100%;
+}
+.w3css-photolio nav a {
+  text-decoration: none;
+}
+.w3css-photolio img {
+  width: 100%;
+  height: auto;
+}
+.w3css-photolio .w3-content {
+  max-width: 1500px;
+}
+.w3css-photolio .usr-burger {
+  top: 16px;
+  right: 16px;
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+          box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+}
+.w3css-photolio .usr-burger::before,
+.w3css-photolio .usr-burger::after {
+  background-color: var(--colorGrey);
+}
+.w3css-photolio .usr-burger--open {
+  -webkit-animation-name: burgerOpenPhotolio;
+          animation-name: burgerOpenPhotolio;
+}
+.w3css-photolio .usr-burger--close {
+  -webkit-animation-name: burgerClosePhotolio;
+          animation-name: burgerClosePhotolio;
+}
+@-webkit-keyframes burgerOpenPhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenPhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerClosePhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerClosePhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+.js-focus-visible .w3css-photolio .focus-visible {
+  outline: 2px solid var(--colorGrey);
+}
+.js-focus-visible .w3css-photolio .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photolio .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photolio .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photolio .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photolio .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-photolio .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photolio .usr-gallery__overlay--hidden {
+  display: none;
+}
+body.w3css-photographer {
+  font-family: 'Raleway', sans-serif;
+}
+.w3css-photographer h1 {
+  font-weight: 350;
+}
+.w3css-photographer header p {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.w3css-photographer img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.w3css-photographer .w3-content {
+  max-width: 1500px;
+}
+.js-focus-visible .w3css-photographer .focus-visible {
+  outline: 2px solid var(--colorGrey);
+}
+.js-focus-visible .w3css-photographer nav .focus-visible {
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-photographer .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photographer .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photographer .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photographer .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photographer .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-photographer .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photographer .usr-gallery__overlay--hidden {
+  display: none;
+}
+.w3css-photographer-2 header p,
+.w3css-photographer-2 h1 {
+  text-transform: uppercase;
+}
+.w3css-photographer-2 nav {
+  position: static;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+@media (min-width: 601px) {
+  .w3css-photographer-2 nav {
+    position: absolute;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
+}
+.w3css-photographer-2 img {
+  width: 100%;
+  height: auto;
+}
+.w3css-photographer-2 header.w3-content {
+  width: 100%;
+  max-width: 1500px;
+}
+.js-focus-visible .w3css-photographer-2 .focus-visible {
+  outline: 2px solid var(--colorGrey);
+}
+.js-focus-visible .w3css-photographer-2 nav .focus-visible {
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-photographer-2 .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photographer-2 .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photographer-2 .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photographer-2 .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photographer-2 .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-photographer-2 .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photographer-2 .usr-gallery__overlay--hidden {
+  display: none;
+}
+body.w3css-web-designer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-web-designer h1,
+.w3css-web-designer h2,
+.w3css-web-designer h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+.w3css-web-designer h2,
+.w3css-web-designer h3 {
+  text-transform: uppercase;
+}
+.w3css-web-designer p {
+  color: var(--colorGrey);
+}
+.w3css-web-designer img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.w3css-web-designer nav {
+  width: 120px;
+  z-index: 3;
+  background-color: var(--colorBlack2);
+}
+@media (min-width: 601px) {
+  .w3css-web-designer nav {
+    display: block;
+  }
+}
+.w3css-web-designer .w3-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.w3css-web-designer nav a {
+  text-transform: uppercase;
+}
+.w3css-web-designer main,
+.w3css-web-designer footer {
+  margin-left: 0;
+}
+@media (min-width: 601px) {
+  .w3css-web-designer main,
+  .w3css-web-designer footer {
+    margin-left: 120px;
+  }
+}
+.w3css-web-designer .w3-jumbo {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.w3css-web-designer hr {
+  width: 200px;
+}
+.w3css-web-designer .usr-bar .w3-grey {
+  height: 24px;
+}
+.w3css-web-designer .usr-bar:nth-of-type(1) .w3-grey {
+  width: 90%;
+}
+.w3css-web-designer .usr-bar:nth-of-type(2) .w3-grey {
+  width: 80%;
+}
+.w3css-web-designer .usr-bar:nth-of-type(3) .w3-grey {
+  width: 70%;
+}
+.w3css-web-designer .usr-price .w3-col {
+  margin-bottom: 16px;
+}
+.w3css-web-designer .usr-price .w3-col:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 601px) {
+  .w3css-web-designer .usr-price .w3-col {
+    margin-bottom: 0;
+  }
+}
+.w3css-web-designer .usr-review li {
+  border: none;
+}
+.w3css-web-designer .usr-review img {
+  width: 80px;
+}
+.w3css-web-designer form button {
+  text-transform: uppercase;
+}
+@media (min-width: 601px) {
+  .w3css-web-designer .w3-overlay {
+    display: none;
+  }
+}
+.w3css-web-designer .usr-burger {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+          box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+}
+@media (min-width: 601px) {
+  .w3css-web-designer .usr-burger {
+    display: none;
+  }
+}
+.w3css-web-designer .usr-burger::before,
+.w3css-web-designer .usr-burger::after {
+  background-color: var(--colorGrey);
+}
+.w3css-web-designer .usr-burger--open {
+  -webkit-animation-name: burgerOpenWebdes;
+          animation-name: burgerOpenWebdes;
+}
+.w3css-web-designer .usr-burger--close {
+  -webkit-animation-name: burgerCloseWebdes;
+          animation-name: burgerCloseWebdes;
+}
+@-webkit-keyframes burgerOpenWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerCloseWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerCloseWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+.js-focus-visible .w3css-web-designer .focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible .w3css-web-designer input.focus-visible,
+.js-focus-visible .w3css-web-designer textarea.focus-visible {
+  outline-offset: 2px;
+}
+.js-focus-visible .w3css-web-designer nav .focus-visible {
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-web-designer .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-web-designer .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-web-designer .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-web-designer .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-web-designer .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-web-designer .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-web-designer .usr-gallery__overlay--hidden {
+  display: none;
+}
+body.w3css-interior-design {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-interior-design h1,
+.w3css-interior-design h2,
+.w3css-interior-design h3 {
+  font-family: 'Poppins', sans-serif;
+}
+.w3css-interior-design h1,
+.w3css-interior-design h2 {
+  font-weight: 700;
+}
+.w3css-interior-design img {
+  width: 100%;
+  height: auto;
+}
+.w3css-interior-design hr {
+  height: 10px;
+  width: 50px;
+}
+.w3css-interior-design .w3-jumbo {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.w3css-interior-design nav {
+  width: 200px;
+  z-index: 3;
+  font-weight: 700;
+}
+@media (min-width: 601px) {
+  .w3css-interior-design nav {
+    display: block;
+  }
+}
+.w3css-interior-design .w3-overlay {
+  background-color: rgba(244, 67, 54, 0.5);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .w3-overlay {
+    display: none;
+  }
+}
+.w3css-interior-design main,
+.w3css-interior-design footer {
+  margin-left: 0;
+}
+@media (min-width: 601px) {
+  .w3css-interior-design main,
+  .w3css-interior-design footer {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .w3-overlay {
+    display: none;
+  }
+}
+.w3css-interior-design .usr-burger {
+  position: fixed;
+  top: 16;
+  right: 16px;
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+          box-shadow: inset 0 -2px 0 0 var(--colorRed);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .usr-burger {
+    display: none;
+  }
+}
+.w3css-interior-design .usr-burger::before,
+.w3css-interior-design .usr-burger::after {
+  background-color: var(--colorRed);
+}
+.w3css-interior-design .usr-burger--open {
+  -webkit-animation-name: burgerOpenInterior;
+          animation-name: burgerOpenInterior;
+}
+.w3css-interior-design .usr-burger--close {
+  -webkit-animation-name: burgerCloseInterior;
+          animation-name: burgerCloseInterior;
+}
+@-webkit-keyframes burgerOpenInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerCloseInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerCloseInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+.js-focus-visible .w3css-interior-design .focus-visible {
+  outline: 2px solid var(--colorRed);
+}
+.js-focus-visible .w3css-interior-design input.focus-visible,
+.js-focus-visible .w3css-interior-design textarea.focus-visible {
+  outline-offset: 2px;
+}
+.js-focus-visible .w3css-interior-design nav .focus-visible {
+  outline: 2px solid var(--colorWhite);
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-interior-design .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.js-focus-visible .w3css-interior-design .usr-price .w3-red > h3.focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible .w3css-interior-design nav .w3-white.focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
+.w3css-interior-design .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-interior-design .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .usr-gallery .w3-image--show {
+    width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-interior-design .usr-gallery .w3-image--show {
+    width: 50vw;
+  }
+}
+.w3css-interior-design .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-interior-design .usr-gallery__overlay--hidden {
+  display: none;
+}
+body.w3css-app-launch {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-app-launch h1,
+.w3css-app-launch h2,
+.w3css-app-launch h3 {
+  font-family: 'Poppins', sans-serif;
+}
+body.w3css-app-launch.w3-content {
+  max-width: 1500px;
+}
+.w3css-app-launch img {
+  widows: 100%;
+  height: auto;
+}
+.w3css-app-launch .usr-slide-caption {
+  width: 35%;
+}
+@media (min-width: 601px) {
+  .w3css-app-launch .usr-btn-slide {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    border-radius: 8px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+.js-focus-visible .w3css-app-launch .focus-visible {
+  outline: 2px solid var(--colorGreen);
+}
+.js-focus-visible .w3css-app-launch header button.usr-modal-btn.focus-visible {
+  outline: 2px solid var(--colorBlack);
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-app-launch header button.usr-btn-slide.focus-visible,
+.js-focus-visible .w3css-app-launch a.w3-button.focus-visible {
+  outline-offset: -2px;
+}
+body.w3css-marketing {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-marketing h1,
+.w3css-marketing h2,
+.w3css-marketing h3 {
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+}
+.w3css-marketing h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.w3css-marketing img {
+  width: 100%;
+  height: auto;
+}
+.w3css-marketing nav {
+  padding: 16px;
+}
+@media (min-width: 601px) {
+  .w3css-marketing nav {
+    padding: 0;
+  }
+}
+.w3css-marketing .w3-content {
+  max-width: 1100px;
+}
+.w3css-marketing .usr-menu {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .w3css-marketing .usr-menu {
+    display: block;
+    width: auto;
+  }
+}
+.w3css-marketing .usr-burger {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+.w3css-marketing .usr-indicator {
+  width: 15px;
+  height: 15px;
+}
+.js-focus-visible .w3css-marketing .focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
+.js-focus-visible .w3css-marketing .usr-menu .focus-visible {
+  outline-offset: -2px;
+}
+.js-focus-visible .w3css-marketing button.usr-right-btn.focus-visible,
+.js-focus-visible .w3css-marketing button.usr-left-btn.focus-visible {
+  outline-offset: -4px;
+}
+.js-focus-visible .w3css-marketing .usr-pricing h3.focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+</style>
+<nav class="w3-bar w3-black w3-hide-small">
+  <h2 class="visually-hidden">Navigation</h2>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">Facebook</span><span class="fa fa-facebook-official"></span></a>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">Instagram</span><span class="fa fa-instagram"></span></a>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">snap-chat</span><span class="fa fa-snapchat"></span></a>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">flicker</span><span class="fa fa-flickr"></span></a>
+  <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">linkeding</span><span class="fa fa-linkedin"></span></a>
+  <header class="header responsive-wrapper">
+    <div class="header-left">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="233.445" height="52.805" viewBox="0 0 233.445 52.805">
+        <defs>
+          <clipPath id="clip-fox-news-logo">
+            <rect width="233.445" height="52.805" />
+          </clipPath>
+        <g id="fox-news-logo" clip-path="url(#clip-fox-news-logo)"></g>
+        </defs>
+      </svg>
+    </div>
+    </header>
+  <!-- carousel -->
+  <div class="carousel">
+    <!-- list item -->
+    <div class="list">
+        <div class="item">
+            <img src="image/img1.jpg">
+            <div class="content">
+                <div class="author">NBS</div>
+                <div class="title">NEWS WEBSITE</div>
+                <div class="topic">NBC NEWS</div>
+                <div class="des">
+                    <!-- lorem 50 -->
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img2.jpg">
+            <div class="content">
+                <div class="author">NBC</div>
+                <div class="title">NEWS WEBSITE</div>
+                <div class="topic">NBS NEWS</div>
+                <div class="des">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img3.jpg">
+            <div class="content">
+                <div class="author">NBC</div>
+                <div class="title">NEWS WEBSITE</div>
+                <div class="topic">NBS NEWS</div>
+                <div class="des">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img4.jpg">
+            <div class="content">
+                <div class="author">NBC</div>
+                <div class="title">NEWS WEBSITE</div>
+                <div class="topic">NBS NEWS</div>
+                <div class="des">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- list thumnail -->
+    <div class="thumbnail">
+        <div class="item">
+            <img src="image/img1.jpg">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img2.jpg">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img3.jpg">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="image/img4.jpg">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+    </div>
     
+
+    <div class="arrows">
+        <button id="prev"></button>
+        <button id="next">></button>
+    </div>
+    <!-- time running -->
+    <div class="time"></div>
+</div>
+
+<script src="app.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  body{
+      margin: 0;
+      background-color: #000;
+      color: #eee;
+      font-family: Poppins;
+      font-size: 12px;
+  }
+  a{
+      text-decoration: none;
+  }
+  header{
+      width: 1140px;
+      max-width: 80%;
+      margin: auto;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+  }
+  header a{
+      color: #eee;
+      margin-right: 40px;
+  }
+  /* carousel */
+  .carousel{
+      height: 100vh;
+      margin-top: -50px;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+  }
+  .carousel .list .item{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0 0 0 0;
+  }
+  .carousel .list .item img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .carousel .list .item .content{
+      position: absolute;
+      top: 20%;
+      width: 1140px;
+      max-width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-right: 30%;
+      box-sizing: border-box;
+      color: #fff;
+      text-shadow: 0 5px 10px #0004;
+  }
+  .carousel .list .item .author{
+      font-weight: bold;
+      letter-spacing: 10px;
+  }
+  .carousel .list .item .title,
+  .carousel .list .item .topic{
+      font-size: 5em;
+      font-weight: bold;
+      line-height: 1.3em;
+  }
+  .carousel .list .item .topic{
+      color: #f1683a;
+  }
+  .carousel .list .item .buttons{
+      display: grid;
+      grid-template-columns: repeat(2, 130px);
+      grid-template-rows: 40px;
+      gap: 5px;
+      margin-top: 20px;
+  }
+  .carousel .list .item .buttons button{
+      border: none;
+      background-color: #eee;
+      letter-spacing: 3px;
+      font-family: Poppins;
+      font-weight: 500;
+  }
+  .carousel .list .item .buttons button:nth-child(2){
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #eee;
+  }
+  /* thumbail */
+  .thumbnail{
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      width: max-content;
+      z-index: 100;
+      display: flex;
+      gap: 20px;
+  }
+  .thumbnail .item{
+      width: 150px;
+      height: 220px;
+      flex-shrink: 0;
+      position: relative;
+  }
+  .thumbnail .item img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+  }
+  .thumbnail .item .content{
+      color: #fff;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+  }
+  .thumbnail .item .content .title{
+      font-weight: 500;
+  }
+  .thumbnail .item .content .description{
+      font-weight: 300;
+  }
+  /* arrows */
+  .arrows{
+      position: absolute;
+      top: 80%;
+      right: 52%;
+      z-index: 100;
+      width: 300px;
+      max-width: 30%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+  }
+  .arrows button{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #eee4;
+      border: none;
+      color: #fff;
+      font-family: monospace;
+      font-weight: bold;
+      transition: .5s;
+  }
+  .arrows button:hover{
+      background-color: #fff;
+      color: #000;
+  }
+  
+  /* animation */
+  .carousel .list .item:nth-child(1){
+      z-index: 1;
+  }
+  
+  /* animation text in first item */
+  
+  .carousel .list .item:nth-child(1) .content .author,
+  .carousel .list .item:nth-child(1) .content .title,
+  .carousel .list .item:nth-child(1) .content .topic,
+  .carousel .list .item:nth-child(1) .content .des,
+  .carousel .list .item:nth-child(1) .content .buttons
+  {
+      transform: translateY(50px);
+      filter: blur(20px);
+      opacity: 0;
+      animation: showContent .5s 1s linear 1 forwards;
+  }
+  @keyframes showContent{
+      to{
+          transform: translateY(0px);
+          filter: blur(0px);
+          opacity: 1;
+      }
+  }
+  .carousel .list .item:nth-child(1) .content .title{
+      animation-delay: 1.2s!important;
+  }
+  .carousel .list .item:nth-child(1) .content .topic{
+      animation-delay: 1.4s!important;
+  }
+  .carousel .list .item:nth-child(1) .content .des{
+      animation-delay: 1.6s!important;
+  }
+  .carousel .list .item:nth-child(1) .content .buttons{
+      animation-delay: 1.8s!important;
+  }
+  /* create animation when next click */
+  .carousel.next .list .item:nth-child(1) img{
+      width: 150px;
+      height: 220px;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 30px;
+      animation: showImage .5s linear 1 forwards;
+  }
+  @keyframes showImage{
+      to{
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+      }
+  }
+  
+  .carousel.next .thumbnail .item:nth-last-child(1){
+      overflow: hidden;
+      animation: showThumbnail .5s linear 1 forwards;
+  }
+  .carousel.prev .list .item img{
+      z-index: 100;
+  }
+  @keyframes showThumbnail{
+      from{
+          width: 0;
+          opacity: 0;
+      }
+  }
+  .carousel.next .thumbnail{
+      animation: effectNext .5s linear 1 forwards;
+  }
+  
+  @keyframes effectNext{
+      from{
+          transform: translateX(150px);
+      }
+  }
+  
+  /* running time */
+  
+  .carousel .time{
+      position: absolute;
+      z-index: 1000;
+      width: 0%;
+      height: 3px;
+      background-color: #f1683a;
+      left: 0;
+      top: 0;
+  }
+  
+  .carousel.next .time,
+  .carousel.prev .time{
+      animation: runningTime 3s linear 1 forwards;
+  }
+  @keyframes runningTime{
+      from{ width: 100%}
+      to{width: 0}
+  }
+  
+  
+  /* prev click */
+  
+  .carousel.prev .list .item:nth-child(2){
+      z-index: 2;
+  }
+  
+  .carousel.prev .list .item:nth-child(2) img{
+      animation: outFrame 0.5s linear 1 forwards;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+  @keyframes outFrame{
+      to{
+          width: 150px;
+          height: 220px;
+          bottom: 50px;
+          left: 50%;
+          border-radius: 20px;
+      }
+  }
+  
+  .carousel.prev .thumbnail .item:nth-child(1){
+      overflow: hidden;
+      opacity: 0;
+      animation: showThumbnail .5s linear 1 forwards;
+  }
+  .carousel.next .arrows button,
+  .carousel.prev .arrows button{
+      pointer-events: none;
+  }
+  .carousel.prev .list .item:nth-child(2) .content .author,
+  .carousel.prev .list .item:nth-child(2) .content .title,
+  .carousel.prev .list .item:nth-child(2) .content .topic,
+  .carousel.prev .list .item:nth-child(2) .content .des,
+  .carousel.prev .list .item:nth-child(2) .content .buttons
+  {
+      animation: contentOut 1.5s linear 1 forwards!important;
+  }
+  
+  @keyframes contentOut{
+      to{
+          transform: translateY(-150px);
+          filter: blur(20px);
+          opacity: 0;
+      }
+  }
+  @media screen and (max-width: 678px) {
+      .carousel .list .item .content{
+          padding-right: 0;
+      }
+      .carousel .list .item .content .title{
+          font-size: 30px;
+      }
+  }
+</style>
+
+     
+  
+  
+
+
+<?php
+
+include('FInal.php');
+
+
+$articles = [
+['id' => 1, 'category' => 'Breaking News', 'title' => 'Earthquake Hits City', 'image' => 'earthquake.jpg', 'excerpt' => 'A powerful earthquake struck the city, causing widespread damage.'],
+['id' => 2, 'category' => 'Tech', 'title' => 'New Smartphone Launched', 'image' => 'smartphone.jpg', 'excerpt' => 'A new smartphone model was unveiled with cutting-edge technology and features.'],
+['id' => 3, 'category' => 'Sports', 'title' => 'Local Team Wins Championship', 'image' => 'sports.jpg', 'excerpt' => 'The local football team won the national championship in a thrilling final match.'],
+
+];
+
+
+$categories = array_unique(array_column($articles, 'category'));
+
+
+?>
+
+
+
+
+
+
+<!-- Categories Section -->
+<section class="article-categories">
+<?php foreach ($categories as $category): ?>
+  <div class="category-section">
+      <h2 class="category-title"><?= $category ?></h2>
+      <div class="category-articles">
+          <?php
+          // Display articles based on category
+          foreach ($articles as $article) {
+              if ($article['category'] == $category) {
+                  echo '<div class="article">';
+                  echo '<a href="article.php?id=' . $article['id'] . '">';
+                  echo '<img src="assets/images/' . $article['image'] . '" alt="' . $article['title'] . '" class="article-image">';
+                  echo '<h3>' . $article['title'] . '</h3>';
+                  echo '<p>' . $article['excerpt'] . '</p>';
+                  echo '</a>';
+                  echo '</div>';
+              }
+          }
+          ?>
+      </div>
+  </div>
+<?php endforeach; ?>
+</section>
+</main>
+
+<?php
+// Include the footer
+include('Final.php');
+?>
+
+<div class="header-middle">
+  <a href="#" class="header-link">Call Us (948) 348 981 872</a>
+  <span>/</span>
+  <a href="#" class="header-link">vindiya@gmail.com</a>
+</div>
+
+
+<?php
+if ($result->num_rows > 0) {
+  // Output data of each row
+  while($row = $result->fetch_assoc()) {
+      echo "<div class='news-article'>";
+      echo "<div class='title'>" . htmlspecialchars($row["title"]) . "</div>";
+      echo "<div class='summary'>" . htmlspecialchars($row["summary"]) . "</div>";
+      echo "<div class='date'>" . date('F d, Y', strtotime($row["published_date"])) . "</div>";
+      echo "</div>";
+  }
+} else {
+  echo "No news articles available.";
+}
+$conn->close();
+?>
 </body>
 </html>
