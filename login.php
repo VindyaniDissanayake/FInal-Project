@@ -1,36 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>News | Login & Registration</title>
+<title>NBC News Website Category Flat Bootstrap Responsive Website Template | Home :: AmnaCode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cooks Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet"> 
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+<link href='//fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
+<?php
+  require('FInal project login.php');
+
+  if ($session_started == false) {
+  echo 'session not started';
+  }
+
+  $error = false;
+  if (isset($HTTP_GET_VARS['action']) && ($HTTP_GET_VARS['action'] == 'process')) {
+    $email_address = tep_db_prepare_input($HTTP_POST_VARS['email_address']);
+    $password = tep_db_prepare_input($HTTP_POST_VARS['password']);
+
+// Check if email exists
+    $check_admin_query = tep_db_query("select admin_id as login_id, admin_groups_id as login_groups_id, admin_firstname as login_firstname, admin_email_address as login_email_address, admin_password as login_password, admin_modified as login_modified, admin_logdate as login_logdate, admin_lognum as login_lognum from " . TABLE_ADMIN . " where admin_email_address = '" . tep_db_input($email_address) . "'");
+    if (!tep_db_num_rows($check_admin_query)) {
+      $HTTP_GET_VARS['login'] = 'fail';
+    } else {
+      $check_admin = tep_db_fetch_array($check_admin_query);
+
+      //BOF code for cPanel installer - convert password to cre hash
+      $check_password = $check_admin['login_password'];
+      if (substr($check_password, 0, 8) == '_cPanel_'){
+        $check_password = substr($check_password, 8);
+        $password_hash = tep_encrypt_password($check_password);
+        tep_db_query("UPDATE " . TABLE_ADMIN . " SET admin_password = '" . $password_hash . "'");
+        $check_admin_query = tep_db_query("select admin_id as login_id, admin_groups_id as login_groups_id, admin_firstname as login_firstname, admin_email_address as login_email_address, admin_password as login_password, admin_modified as login_modified, admin_logdate as login_logdate, admin_lognum as login_lognum from " . TABLE_ADMIN . " where admin_email_address = '" . tep_db_input($email_address) . "'");
+        $check_admin = tep_db_fetch_array($check_admin_query);
+      }
+      //EOF code for cPanel installer - convert password to cre hash
+
+      // Check that password is good
+      if (!tep_validate_password($password, $check_admin['login_password'])) {
+        $HTTP_GET_VARS['login'] = 'fail';
+      } else {
+        if (tep_session_is_registered('password_forgotten')) {
+          tep_session_unregister('password_forgotten');
+        }
+
+        $login_id = $check_admin['login_id'];
+        $login_groups_id = $check_admin[login_groups_id];
+        $login_firstname = $check_admin['login_firstname'];
+        $login_email_address = $check_admin['login_email_address'];
+        $login_logdate = $check_admin['login_logdate'];
+        $login_lognum = $check_admin['login_lognum'];
+        $login_modified = $check_admin['login_modified'];
+
+        tep_session_register('login_id');
+        tep_session_register('login_groups_id');
+        tep_session_register('login_firstname');
+
+        //$date_now = date('Ymd');
+        tep_db_query("update " . TABLE_ADMIN . " set admin_logdate = now(), admin_lognum = admin_lognum+1 where admin_id = '" . $login_id . "'");
+
+        if (($login_lognum == 0) || !($login_logdate) || ($login_email_address == 'admin@localhost') || ($login_modified == '0000-00-00 00:00:00')) {
+          tep_redirect(tep_href_link(FILENAME_ADMIN_ACCOUNT, '', 'SSL'));
+        } else {
+          tep_redirect(tep_href_link(FILENAME_DEFAULT, '', 'SSL'));
+        }
+
+      }
+    }
+  }
+
+  require(DIR_WS_LANGUAGES . $language . '/' . FILENAME_LOGIN);
+  include('FInal project login.php');
+?>
 <body>
-    <div class="wrapper">
-        <nav class="nav">
-            <div class="nav-logo">
-                <p>LOGO .</p>
-            </div>
-            <clipPath id="clip-fox-news-logo">
-                <rect width="233.445" height="52.805" />
-            </clipPath>
-              
-       
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#" class="link active">Home</a></li>
-                    <li><a href="#" class="link active">Finance</a></li>
-                    <li><a href="#" class="link activ">Blog</a></li>
-                    <li><a href="#" class="link active">Education</a></li>
-                    <li><a href="#" class="link active">Sport</a></li>
-                    <li><a href="#" class="link active">Services</a></li>
-                    <li><a href="#" class="link active">About Us</a></li>
-                    <li><a href="#" class="link active">Privancy Police</a></li>
-                </ul>
-        </div>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<a class="navbar-brand" href="index.html">News</a>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="cl-effect-13" id="cl-effect-13">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="events.html">Finance</a></li>
+							<li><a href="short-codes.html">Blog</a></li>
+              <li><a href="index.html" class="active"></a></li>
+							<li><a href="events.html">Education</a></li>
+							<li><a href="short-codes.html">Sport</a></li>
+							<li><a href="short-codes.html">About Us</a></li>
+							<li role="presentation" class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								  Services <span class="caret"></span>
+								</a>
+                
+								<ul class="dropdown-menu">
+								  <li><a href="services.html">News Alerts</a></li>
+								  <li><a href="services.html">In-Depth Analysis and Features</a></li>
+								</ul>
+							</li>
+							<li><a href="mail.html">Mail Us</a></li>
+						</ul>
+					</nav>
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
             <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
@@ -47,7 +147,7 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 <header>Login</header>
             </div>
             <div class="input-box">
@@ -112,7 +212,8 @@
     </div>
 </div>   
 <style>
-
+/* POPPINS FONT */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{  
     margin: 0;
@@ -121,7 +222,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("https://i.ytimg.com/vi/HhqpwxRn3CY/maxresdefault.jpg");
+    background: url("images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

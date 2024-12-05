@@ -75,22 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<style>
-	/* Custom Styles */
-.card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-    font-weight: bold;
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-</style>
+	
 <!-- //banner -->
 <!-- banner-bottom -->
 	<div class="banner-bottom">
@@ -225,53 +210,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 				
-				<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Finance News</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="finance.php">Finance</a>
-      </li>
-      <!-- Add other categories like business, technology, etc. -->
-    </ul>
-  </div>
-</nav>
-
-<!-- Main content -->
-<div class="container mt-4">
-    <h1 class="text-center mb-4">Latest Finance News</h1>
-    <div class="row">
-        <?php while ($row = $result->fetch_assoc()) { ?>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="<?php echo $row['image_url']; ?>" class="card-img-top" alt="article-image">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $row['title']; ?></h5>
-                    <p class="card-text"><?php echo substr($row['content'], 0, 100); ?>...</p>
-                    <a href="article.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Read more</a>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>&copy; 2024 Finance News</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iRABmXk5YoVnY6rFZIH00F5tKz3TmQe2ytlx9ho8fFw3Kn6tXzAvA6gDh" crossorigin="anonymous"></script>
-</body>
-</html>
-
-<?php
-$conn->close();
-?>
+				

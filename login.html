@@ -1,36 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>News | Login & Registration</title>
+<title>NBC News Website Category Flat Bootstrap Responsive Website Template | Home :: AmnaCode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cooks Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet"> 
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+<link href='//fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav class="nav">
-            <div class="nav-logo">
-                <p>LOGO .</p>
-            </div>
-            <clipPath id="clip-fox-news-logo">
-                <rect width="233.445" height="52.805" />
-            </clipPath>
-              
-       
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#" class="link active">Home</a></li>
-                    <li><a href="#" class="link active">Finance</a></li>
-                    <li><a href="#" class="link activ">Blog</a></li>
-                    <li><a href="#" class="link active">Education</a></li>
-                    <li><a href="#" class="link active">Sport</a></li>
-                    <li><a href="#" class="link active">Services</a></li>
-                    <li><a href="#" class="link active">About Us</a></li>
-                    <li><a href="#" class="link active">Privancy Police</a></li>
-                </ul>
-        </div>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<a class="navbar-brand" href="index.html">News</a>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="cl-effect-13" id="cl-effect-13">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="events.html">Finance</a></li>
+							<li><a href="short-codes.html">Blog</a></li>
+              <li><a href="index.html" class="active"></a></li>
+							<li><a href="events.html">Education</a></li>
+							<li><a href="short-codes.html">Sport</a></li>
+							<li><a href="short-codes.html">About Us</a></li>
+							<li role="presentation" class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								  Services <span class="caret"></span>
+								</a>
+                
+								<ul class="dropdown-menu">
+								  <li><a href="services.html">News Alerts</a></li>
+								  <li><a href="services.html">In-Depth Analysis and Features</a></li>
+								</ul>
+							</li>
+							<li><a href="mail.html">Mail Us</a></li>
+						</ul>
+					</nav>
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
             <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
@@ -47,7 +82,7 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 <header>Login</header>
             </div>
             <div class="input-box">
@@ -112,7 +147,8 @@
     </div>
 </div>   
 <style>
-
+/* POPPINS FONT */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{  
     margin: 0;
@@ -121,7 +157,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("https://i.ytimg.com/vi/HhqpwxRn3CY/maxresdefault.jpg");
+    background: url("images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

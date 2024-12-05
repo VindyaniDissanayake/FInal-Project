@@ -1,0 +1,189 @@
+/news_blog_site
+    /assets
+        /css
+            style.css
+        /images
+    /data
+        articles.json
+    /includes
+        header.php
+        footer.php
+    index.php
+    article.php
+    /news_blog_site
+    /assets
+        /css
+            style.css
+        /images
+    /data
+        articles.json
+    /includes
+        header.php
+        footer.php
+    index.php
+    article.php
+    [
+    {
+        "id": 1,
+        "title": "Breaking News: PHP Simplifies Web Development",
+        "summary": "PHP has long been a popular language for web development. This new update makes it even easier.",
+        "content": "PHP, a widely-used open-source scripting language, continues to be the backbone of many websites...",
+        "date": "2024-12-05",
+        "image": "image1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "New Trends in Web Design",
+        "summary": "Web design is evolving rapidly with new technologies and trends emerging each year.",
+        "content": "From responsive design to the rise of dark mode, web design is changing to meet the needs of modern users...",
+        "date": "2024-12-04",
+        "image": "image2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "How to Optimize Your Website for SEO",
+        "summary": "Search Engine Optimization (SEO) is crucial for the visibility of your website in search engines.",
+        "content": "Learn the best practices for optimizing your website for search engines, from keyword research to page load speeds...",
+        "date": "2024-12-03",
+        "image": "image3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Understanding Artificial Intelligence in Web Development",
+        "summary": "AI is becoming a game changer in the world of web development, from automated content generation to smart user interfaces.",
+        "content": "Discover how Artificial Intelligence (AI) is impacting the web development world, revolutionizing the way developers work...",
+        "date": "2024-12-02",
+        "image": "image4.jpg"
+    }
+]
+<!-- includes/header.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My News Blog</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.php">My News Blog</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+    /* assets/css/style.css */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    article.post {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+    }
+    
+    .post-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    article h2 a {
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    article h2 a:hover {
+        color: #007bff;
+    }
+    
+    .summary {
+        color: #555;
+    }
+    
+    .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .read-more:hover {
+        background-color: #0056b3;
+    }
+    
+    .pagination {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .pagination a {
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .pagination a:hover {
+        background-color: #0056b3;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+    }
+</style>    

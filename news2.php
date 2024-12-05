@@ -49,15 +49,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="index.html" class="active">Home</a></li>
 							<li><a href="events.html">Finance</a></li>
 							<li><a href="short-codes.html">Blog</a></li>
-              <li><a href="index.html" class="active"></a></li>
-							<li><a href="events.html">Education</a></li>
-							<li><a href="short-codes.html">Sport</a></li>
-							<li><a href="short-codes.html">About Us</a></li>
 							<li role="presentation" class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								  Services <span class="caret"></span>
 								</a>
-                
 								<ul class="dropdown-menu">
 								  <li><a href="services.html">News Alerts</a></li>
 								  <li><a href="services.html">In-Depth Analysis and Features</a></li>
@@ -79,429 +74,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</nav>
 		</div>
 	</div>
-  
-
-
-  <div class="carousel">
-      <!-- list item -->
-      <div class="list">
-          <div class="item">
-              <img src="https://thumbs.dreamstime.com/b/technology-science-news-background-digital-wires-dots-world-map-143218265.jpg">
-              <div class="content">
-                  <div class="author">NBC</div>
-                  <div class="title">WELCOME TO</div>
-                  <div class="topic">NBC NEWS</div>
-                  <div class="des">
-                      <!-- lorem 50 -->
-                      NBC News is a prominent American news outlet delivering reliable, up-to-date coverage of global and national events. Known for its comprehensive reporting, NBC News covers politics, business, entertainment, health, and more, offering breaking news, investigative stories, and in-depth analysis. It provides news across multiple platforms, ensuring accessibility and credibility for its audience.
-                  </div>
-                  <div class="buttons">
-                      <button>SEE MORE</button>
-                      <button>SUBSCRIBE</button>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="https://www.shutterstock.com/shutterstock/videos/1026478409/thumb/1.jpg?ip=x480">
-              <div class="content">
-                  <div class="author">NBC</div>
-                  <div class="title">WELCOME TO</div>
-                  <div class="topic">NBS NEWS</div>
-                  <div class="des">
-                    NBC News is a prominent American news outlet delivering reliable, up-to-date coverage of global and national events. Known for its comprehensive reporting, NBC News covers politics, business, entertainment, health, and more, offering breaking news, investigative stories, and in-depth analysis. It provides news across multiple platforms, ensuring accessibility and credibility for its audience.
-                  </div>
-                  <div class="buttons">
-                      <button>SEE MORE</button>
-                      <button>SUBSCRIBE</button>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="image/img3.jpg">
-              <div class="content">
-                  <div class="author">NBC</div>
-                  <div class="title">WELCOME TO</div>
-                  <div class="topic">NBS NEWS</div>
-                  <div class="des">
-                    NBC News is a prominent American news outlet delivering reliable, up-to-date coverage of global and national events. Known for its comprehensive reporting, NBC News covers politics, business, entertainment, health, and more, offering breaking news, investigative stories, and in-depth analysis. It provides news across multiple platforms, ensuring accessibility and credibility for its audience.
-                  </div>
-                  <div class="buttons">
-                      <button>SEE MORE</button>
-                      <button>SUBSCRIBE</button>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="">
-              <div class="content">
-                  <div class="author">NBC</div>
-                  <div class="title">WELCOME TO</div>
-                  <div class="topic">NBS NEWS</div>
-                  <div class="des">
-                    NBC News is a prominent American news outlet delivering reliable, up-to-date coverage of global and national events. Known for its comprehensive reporting, NBC News covers politics, business, entertainment, health, and more, offering breaking news, investigative stories, and in-depth analysis. It provides news across multiple platforms, ensuring accessibility and credibility for its audience.
-                  </div>
-                  <div class="buttons">
-                      <button>SEE MORE</button>
-                      <button>SUBSCRIBE</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- list thumnail -->
-      <div class="thumbnail">
-          <div class="item">
-              <img src="https://d1dtajqni3g43z.cloudfront.net/DNSO/2024/12/03/DNM/5_01/87d16f46_01_ss.jpg">
-              <div class="content">
-                  <div class="title">
-                      
-                  </div>
-                  <div class="description">
-                      
-                  </div>
-              </div>
-          </div>
-          <div class="thumbnail">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF362LTtPCaO0lmRLSnhaaGIeRqoe9zHZHqA&s">
-              <div class="content">
-                  <div class="title">
-                      
-                  </div>
-                  <div class="description">
-                      
-                  </div>
-              </div>
-          </div>
-          <div class="thumbnail">
-              <img src="https://d1dtajqni3g43z.cloudfront.net/DNSO/2024/12/03/DNM/5_11/25336b99_11_ss.jpg">
-              <div class="content">
-                  <div class="title">
-                      
-                  </div>
-                  <div class="description">
-                      
-                  </div>
-              </div>
-          </div>
-         
-      <style>
-    
-    body{
-        margin: 0;
-        background-color: #000;
-        color: #eee;
-        font-family: Poppins;
-        font-size: 12px;
-    }
-    a{
-        text-decoration: none;
-    }
-    header{
-        width: 1140px;
-        max-width: 80%;
-        margin: auto;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 100;
-    }
-    header a{
-        color: #eee;
-        margin-right: 40px;
-    }
-    /* carousel */
-    .carousel{
-        height: 100vh;
-        margin-top: -50px;
-        width: 100vw;
-        overflow: hidden;
-        position: relative;
-    }
-    .carousel .list .item{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        inset: 0 0 0 0;
-    }
-    .carousel .list .item img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .carousel .list .item .content{
-        position: absolute;
-        top: 20%;
-        width: 1140px;
-        max-width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding-right: 30%;
-        box-sizing: border-box;
-        color: #fff;
-        text-shadow: 0 5px 10px #0004;
-    }
-    .carousel .list .item .author{
-        font-weight: bold;
-        letter-spacing: 10px;
-    }
-    .carousel .list .item .title,
-    .carousel .list .item .topic{
-        font-size: 5em;
-        font-weight: bold;
-        line-height: 1.3em;
-    }
-    .carousel .list .item .topic{
-        color: #f1683a;
-    }
-    .carousel .list .item .buttons{
-        display: grid;
-        grid-template-columns: repeat(2, 130px);
-        grid-template-rows: 40px;
-        gap: 5px;
-        margin-top: 20px;
-    }
-    .carousel .list .item .buttons button{
-        border: none;
-        background-color: #eee;
-        letter-spacing: 3px;
-        font-family: Poppins;
-        font-weight: 500;
-    }
-    .carousel .list .item .buttons button:nth-child(2){
-        background-color: transparent;
-        border: 1px solid #fff;
-        color: #eee;
-    }
-    /* thumbail */
-    .thumbnail{
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        width: max-content;
-        z-index: 100;
-        display: flex;
-        gap: 20px;
-    }
-    .thumbnail .item{
-        width: 150px;
-        height: 220px;
-        flex-shrink: 0;
-        position: relative;
-    }
-    .thumbnail .item img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-    .thumbnail .item .content{
-        color: #fff;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-    }
-    .thumbnail .item .content .title{
-        font-weight: 500;
-    }
-    .thumbnail .item .content .description{
-        font-weight: 300;
-    }
-    /* arrows */
-    .arrows{
-        position: absolute;
-        top: 80%;
-        right: 52%;
-        z-index: 100;
-        width: 300px;
-        max-width: 30%;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-    .arrows button{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #eee4;
-        border: none;
-        color: #fff;
-        font-family: monospace;
-        font-weight: bold;
-        transition: .5s;
-    }
-    .arrows button:hover{
-        background-color: #fff;
-        color: #000;
-    }
-    
-    /* animation */
-    .carousel .list .item:nth-child(1){
-        z-index: 1;
-    }
-    
-    /* animation text in first item */
-    
-    .carousel .list .item:nth-child(1) .content .author,
-    .carousel .list .item:nth-child(1) .content .title,
-    .carousel .list .item:nth-child(1) .content .topic,
-    .carousel .list .item:nth-child(1) .content .des,
-    .carousel .list .item:nth-child(1) .content .buttons
-    {
-        transform: translateY(50px);
-        filter: blur(20px);
-        opacity: 0;
-        animation: showContent .5s 1s linear 1 forwards;
-    }
-    @keyframes showContent{
-        to{
-            transform: translateY(0px);
-            filter: blur(0px);
-            opacity: 1;
-        }
-    }
-    .carousel .list .item:nth-child(1) .content .title{
-        animation-delay: 1.2s!important;
-    }
-    .carousel .list .item:nth-child(1) .content .topic{
-        animation-delay: 1.4s!important;
-    }
-    .carousel .list .item:nth-child(1) .content .des{
-        animation-delay: 1.6s!important;
-    }
-    .carousel .list .item:nth-child(1) .content .buttons{
-        animation-delay: 1.8s!important;
-    }
-    /* create animation when next click */
-    .carousel.next .list .item:nth-child(1) img{
-        width: 150px;
-        height: 220px;
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        border-radius: 30px;
-        animation: showImage .5s linear 1 forwards;
-    }
-    @keyframes showImage{
-        to{
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 0;
-        }
-    }
-    
-    .carousel.next .thumbnail .item:nth-last-child(1){
-        overflow: hidden;
-        animation: showThumbnail .5s linear 1 forwards;
-    }
-    .carousel.prev .list .item img{
-        z-index: 100;
-    }
-    @keyframes showThumbnail{
-        from{
-            width: 0;
-            opacity: 0;
-        }
-    }
-    .carousel.next .thumbnail{
-        animation: effectNext .5s linear 1 forwards;
-    }
-    
-    @keyframes effectNext{
-        from{
-            transform: translateX(150px);
-        }
-    }
-    
-    /* running time */
-    
-    .carousel .time{
-        position: absolute;
-        z-index: 1000;
-        width: 0%;
-        height: 3px;
-        background-color: #f1683a;
-        left: 0;
-        top: 0;
-    }
-    
-    .carousel.next .time,
-    .carousel.prev .time{
-        animation: runningTime 3s linear 1 forwards;
-    }
-    @keyframes runningTime{
-        from{ width: 100%}
-        to{width: 0}
-    }
-    
-    
-    /* prev click */
-    
-    .carousel.prev .list .item:nth-child(2){
-        z-index: 2;
-    }
-    
-    .carousel.prev .list .item:nth-child(2) img{
-        animation: outFrame 0.5s linear 1 forwards;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-    @keyframes outFrame{
-        to{
-            width: 150px;
-            height: 220px;
-            bottom: 50px;
-            left: 50%;
-            border-radius: 20px;
-        }
-    }
-    
-    .carousel.prev .thumbnail .item:nth-child(1){
-        overflow: hidden;
-        opacity: 0;
-        animation: showThumbnail .5s linear 1 forwards;
-    }
-    .carousel.next .arrows button,
-    .carousel.prev .arrows button{
-        pointer-events: none;
-    }
-    .carousel.prev .list .item:nth-child(2) .content .author,
-    .carousel.prev .list .item:nth-child(2) .content .title,
-    .carousel.prev .list .item:nth-child(2) .content .topic,
-    .carousel.prev .list .item:nth-child(2) .content .des,
-    .carousel.prev .list .item:nth-child(2) .content .buttons
-    {
-        animation: contentOut 1.5s linear 1 forwards!important;
-    }
-    
-    @keyframes contentOut{
-        to{
-            transform: translateY(-150px);
-            filter: blur(20px);
-            opacity: 0;
-        }
-    }
-    @media screen and (max-width: 678px) {
-        .carousel .list .item .content{
-            padding-right: 0;
-        }
-        .carousel .list .item .content .title{
-            font-size: 30px;
-        }
-    }
-  </style>
-
-
-
-
-
-      
-</main>
 <!-- header -->
-
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="banner-info">
+				<h1 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">Sed ut perspiciatis unde omnis iste natus.<span>Excepteur sint occaecat cupidatat non proident</span></h1>
+				<div class="banner-info1 animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+					<ul id="flexiselDemo1">			
+						<li>
+							<div class="banner-info1-grid">
+								<img src="images/1.png" alt=" " class="img-responsive" />
+								<h3>denouncing pleasure</h3>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit
+									esse cillum dolore eu fugiat nulla pariatur.</p>
+							</div>
+						</li>
+						<li>
+							<div class="banner-info1-grid">
+								<img src="images/2.png" alt=" " class="img-responsive" />
+								<h3>denouncing pleasure</h3>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit
+									esse cillum dolore eu fugiat nulla pariatur.</p>
+							</div>
+						</li>
+						<li>
+							<div class="banner-info1-grid">
+								<img src="images/3.png" alt=" " class="img-responsive" />
+								<h3>denouncing pleasure</h3>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit
+									esse cillum dolore eu fugiat nulla pariatur.</p>
+							</div>
+						</li>
+					</ul>
 						<script type="text/javascript">
 							$(window).load(function() {
 								$("#flexiselDemo1").flexisel({
@@ -529,9 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 							});
 					</script>
-          
-
-					<script type="text/javascript" img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLUPb5X3pIJ4Oj8pFT1ZPAyjbOpahHuBGh8g&s"></script>
+					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 					<div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
 					</div>
@@ -545,7 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="banner-bottom-grids">
 				<div class="col-md-5 banner-bottom-grid wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<img src="https://e3.365dm.com/24/12/768x432/skynews-newspapers-paper-preview_6763920.jpg" width="300" heigt="200">
+					<h2>vel illum qui dolorem eum</h2>
 					<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
 					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
 					ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
@@ -554,57 +157,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
 					</div>
 				</div>
-
-            <div class="col-md-7 banner-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<div class="col-md-7 banner-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
 					<div class="banner-bottom-grid1">
-						<img src="https://s3.ap-southeast-1.amazonaws.com/static.combank.cloud/photos/shares/News%20and%20Events/2024/October/Global-Finance-Best-Bank-in-Sri-Lanka-2024-web-thumb.jpg" alt=" " width= "300" hight= "200"class="img-responsive" />
-            <p> "The Commercial Bank Awards Ceremony 2024 honored the top-performing banks for their outstanding contributions to financial services.
-                 Recognized for excellence in innovation, digital banking, and customer satisfaction,
-                 the event showcased leading institutions that are driving economic growth and reshaping the future of banking.
-                 Awards were presented to banks excelling in various categories, 
-                 reflecting their commitment to customer-centricity and technological advancements.
-
-               
-
-
-
-
-
-
-           
-<?php
-$uploadDirectory = "uploads/";
-
-// Check if the directory exists and get all images from it
-if (is_dir($uploadDirectory)) {
-    $images = array_diff(scandir($uploadDirectory), array('..', '.')); // Skip . and ..
-    echo "<h2>News Images</h2>";
-
-    foreach ($images as $image) {
-        echo "<div>";
-        echo "<img src='$uploadDirectory$image' alt='News Image' style='width: 300px; height: auto; margin: 10px;'>";
-        echo "<p>Image: $image</p>";
-        echo "</div>";
-    }
-} else {
-    echo "No images found.";
-}
-?>
-
-
-
-                 
-                 <div class="container">
-    
-    		
-   
-       
+						<img src="images/1.jpg" alt=" " class="img-responsive" />
+						<div class="banner-bottom-grid-pos">
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+								<span class="sr-only">30% Complete</span>
+							  </div>
+							</div>
+							<div class="progress progress1">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+								<span class="sr-only">20% Complete</span>
+							  </div>
+							</div>
+							<div class="progress progress2">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+								<span class="sr-only">30% Complete</span>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="banner-bottom-grids">
 				<div class="col-md-6 banner-bottom-grid-1 wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
 					<div class="banner-bottom-grid-11">
-						<img src="" alt=" " width="" hight="" class="img-responsive" />
+						<img src="images/2.jpg" alt=" " class="img-responsive" />
 						<div class="banner-bottom-grid-11-pos">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 								sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -676,47 +256,6 @@ if (is_dir($uploadDirectory)) {
 			</div>
 		</div>
 	</div>
-  <script>
-  fetch('http://yourdomain.com/get_news.php')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // Display the fetched news articles
-    let newsHtml = '';
-    data.forEach(article => {
-      newsHtml += `
-        <div class="news-article">
-          <h2>${article.title}</h2>
-          <p>${article.content}</p>
-          <img src="${article.image_url}" alt="Image">
-          <p>By: ${article.author} | Published on: ${article.published_at}</p>
-        </div>
-      `;
-    });
-    document.getElementById('newsContainer').innerHTML = newsHtml;
-  })
-  .catch(error => console.error('Error fetching news:', error));
-</script>
-  <?php
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $title = $_POST['title'];
-    $content = $_POST['content'];
-    $image_url = $_POST['image_url'];
-    $author = $_POST['author'];
-
-    $sql = "INSERT INTO news (title, content, image_url, author) 
-            VALUES ('$title', '$content', '$image_url', '$author')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo json_encode(array("message" => "New record created successfully"));
-    } else {
-        echo json_encode(array("error" => "Error: " . $sql . "<br>" . $conn->error));
-    }
-
-    $conn->close();
-}
-?>
 <!-- //newsletter-bottom -->
 <!-- footer -->
 	<div class="footer">
@@ -760,29 +299,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 					<h3>Flickr Posts</h3>
 					<div class="footer-grd">
-						<a href="#"><img src="https://i.pinimg.com/474x/31/86/57/3186573ba27ff1aa66ec27c100104fed.jpg" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/7.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="footer-grd">
-						<a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiOCMUXhydHdfXbx7gQOu2whFkznge8qGnVIISiTji1S-wqkwZUCsXK6hRkE18zSbC5ME&usqp=CAU" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/8.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="footer-grd">
-						<a href="#"><img src="https://img.freepik.com/premium-psd/psd-social-media-instagram-news-sharing-template_934251-26.jpg?semt=ais_hybrid" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/7.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="clearfix"> </div>
 					<div class="footer-grd">
-						<a href="#"><img src="https://i.pinimg.com/736x/66/1a/cf/661acf9d6613b371e9c1ae98490bdd3c.jpg" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/8.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="footer-grd">
-						<a href="#"><img src="https://img.freepik.com/free-psd/flat-design-abstract-music-template_23-2150035350.jpg" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/7.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="footer-grd">
-						<a href="#"><img src="https://img.freepik.com/premium-psd/sport-ad-instagram-stories-template_23-2148758021.jpg" class="img-responsive" alt=" " /></a>
-					</div>
-          <div class="footer-grd">
-						<a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Ym4bG4PzJ0hptwu3Lok_VcSENeeus5hEHQAguTd7OYwfR8iYBZqXUcNwlnCJF_5xWUA&usqp=CAU" class="img-responsive" alt=" " /></a>
-					</div>
-          <div class="footer-grd">
-						<a href="#"><img src="https://img.freepik.com/free-psd/stop-fake-news-social-media-posts_23-2149004011.jpg" class="img-responsive" alt=" " /></a>
+						<a href="#"><img src="images/8.jpg" class="img-responsive" alt=" " /></a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -801,6 +334,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- //for bootstrap working -->
  <style>
 
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -886,7 +431,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   animation-name: flash;
 }
 
-
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes pulse {
   0% {
@@ -1167,7 +712,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   animation-name: tada;
 }
 
-
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes wobble {
   0% {
