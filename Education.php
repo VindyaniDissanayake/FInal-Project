@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NBC NEWS</title>
+    <title>Education-NBC NEWS</title>
     <style>
+        /* Set background color for the whole page */
+
+
        /* Reset Default Styles */
        * {
             margin: 0;
@@ -256,7 +259,10 @@
             }
         }
 
-        
+       /* Set background color for the whole page */
+
+
+ 
        
     </style>
    
@@ -407,7 +413,9 @@
     <footer>
         <p>&copy; 2024 NBC NEWS. All rights reserved.</p>
     </footer>
-
+   
+        
+            
 </body>
 
 </html>
