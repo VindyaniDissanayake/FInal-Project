@@ -1,189 +1,198 @@
-/news_blog_site
-    /assets
-        /css
-            style.css
-        /images
-    /data
-        articles.json
-    /includes
-        header.php
-        footer.php
-    index.php
-    article.php
-    /news_blog_site
-    /assets
-        /css
-            style.css
-        /images
-    /data
-        articles.json
-    /includes
-        header.php
-        footer.php
-    index.php
-    article.php
-    [
-    {
-        "id": 1,
-        "title": "Breaking News: PHP Simplifies Web Development",
-        "summary": "PHP has long been a popular language for web development. This new update makes it even easier.",
-        "content": "PHP, a widely-used open-source scripting language, continues to be the backbone of many websites...",
-        "date": "2024-12-05",
-        "image": "image1.jpg"
-    },
-    {
-        "id": 2,
-        "title": "New Trends in Web Design",
-        "summary": "Web design is evolving rapidly with new technologies and trends emerging each year.",
-        "content": "From responsive design to the rise of dark mode, web design is changing to meet the needs of modern users...",
-        "date": "2024-12-04",
-        "image": "image2.jpg"
-    },
-    {
-        "id": 3,
-        "title": "How to Optimize Your Website for SEO",
-        "summary": "Search Engine Optimization (SEO) is crucial for the visibility of your website in search engines.",
-        "content": "Learn the best practices for optimizing your website for search engines, from keyword research to page load speeds...",
-        "date": "2024-12-03",
-        "image": "image3.jpg"
-    },
-    {
-        "id": 4,
-        "title": "Understanding Artificial Intelligence in Web Development",
-        "summary": "AI is becoming a game changer in the world of web development, from automated content generation to smart user interfaces.",
-        "content": "Discover how Artificial Intelligence (AI) is impacting the web development world, revolutionizing the way developers work...",
-        "date": "2024-12-02",
-        "image": "image4.jpg"
-    }
-]
-<!-- includes/header.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My News Blog</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Image-Slider</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.php">My News Blog</a>
+
+    <div class="container">
+        <span class="slider" id="slider1"></span>
+        <span class="slider" id="slider2"></span>
+        <span class="slider" id="slider3"></span>
+        <span class="slider" id="slider4"></span>
+        <span class="slider" id="slider5"></span>
+        <span class="slider" id="slider6"></span>
+        <span class="slider" id="slider7"></span>
+
+        <div class="imgContainer">
+
+           <div class="slide_div" id="slide_1">
+            <img src="./story_images/a61.jpg" alt="" class="img" id="img1">
+            <a href="#slider1" class="button" id="button1"></a>
+           </div>
+           <div class="slide_div" id="slide_2">
+            <img src="./story_images/a70.jpg" alt="" class="img" id="img2">
+            <a href="#slider2" class="button" id="button2"></a>
+           </div>
+           <div class="slide_div" id="slide_3">
+            <img src="./story_images/a63.jpg" alt="" class="img" id="img3">
+            <a href="#slider3" class="button" id="button3"></a>
+           </div>
+           <div class="slide_div" id="slide_4">
+            <img src="./story_images/a72.jpeg" alt="" class="img" id="img4">
+            <a href="#slider4" class="button" id="button4"></a>
+           </div>
+           <div class="slide_div" id="slide_5">
+            <img src="./story_images/a67.jpg" alt="" class="img" id="img5">
+            <a href="#slider5" class="button" id="button5"></a>
+           </div>
+           <div class="slide_div" id="slide_6">
+            <img src="./story_images/a66.jpg" alt="" class="img" id="img6">
+            <a href="#slider6" class="button" id="button6"></a>
+           </div>
+           <div class="slide_div" id="slide_7">
+            <img src="./story_images/a60.jpg" alt="" class="img" id="img7">
+            <a href="#slider7" class="button" id="button7"></a>
+           </div>
+
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        
+    </div>
     <style>
-    /* assets/css/style.css */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(30deg, rgb(100, 241, 84), rgb(92, 92, 229), rgb(111, 30, 30));
     }
     
-    header {
-        background-color: #333;
-        color: white;
-        padding: 15px;
-        text-align: center;
+    .container{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
     }
     
-    header nav ul {
-        list-style: none;
-        padding: 0;
+    .imgContainer{
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
     }
     
-    header nav ul li {
-        display: inline-block;
-        margin-left: 15px;
+    .slide_div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 30px 0 30px;
     }
     
-    header nav ul li a {
-        color: white;
-        text-decoration: none;
+    img{
+        position: relative;
+        height: 370px;
+        width: 240px;
+        filter: saturate(10%);
+        transition: 0.7s;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
     }
     
-    main {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
+    .button{
+        position: absolute;
+        width: 240px;
+        height: 370px;
+        transition: 0.7s;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
     }
     
-    .content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
+    .button:hover{
+        background-color: rgba(0, 0, 0, 0.2);
     }
     
-    article.post {
-        margin-bottom: 30px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 20px;
+    #slider1:target ~ .imgContainer #img1,
+    #slider1:target ~ .imgContainer #button1{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    .post-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
+    #slider2:target ~ .imgContainer #img2,
+    #slider2:target ~ .imgContainer #button2{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    article h2 a {
-        font-size: 24px;
-        text-decoration: none;
-        color: #333;
+    #slider3:target ~ .imgContainer #img3,
+    #slider3:target ~ .imgContainer #button3{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    article h2 a:hover {
-        color: #007bff;
+    #slider4:target ~ .imgContainer #img4,
+    #slider4:target ~ .imgContainer #button4{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    .summary {
-        color: #555;
+    #slider5:target ~ .imgContainer #img5,
+    #slider5:target ~ .imgContainer #button5{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    .read-more {
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        background-color: #007bff;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
+    #slider6:target ~ .imgContainer #img6,
+    #slider6:target ~ .imgContainer #button6{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    .read-more:hover {
-        background-color: #0056b3;
+    #slider7:target ~ .imgContainer #img7,
+    #slider7:target ~ .imgContainer #button7{
+        width: 390px;
+        height: 600px;
+        background-color: transparent;
+        filter: saturate(100%);
     }
     
-    .pagination {
-        text-align: center;
-        margin-top: 20px;
+    
+    #slider1:target ~ .imgContainer{
+        left: 60%;
+    }
+    #slider2:target ~ .imgContainer{
+        left: 40%;
+    }
+    #slider3:target ~ .imgContainer{
+        left: 20%;
+    }
+    #slider4:target ~ .imgContainer{
+        left: 0%;
+    }
+    #slider5:target ~ .imgContainer{
+        left: -20%;
+    }
+    #slider6:target ~ .imgContainer{
+        left: -40%;
+    }
+    #slider7:target ~ .imgContainer{
+        left: -60%;
     }
     
-    .pagination a {
-        text-decoration: none;
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        margin: 0 5px;
-        border-radius: 5px;
-    }
     
-    .pagination a:hover {
-        background-color: #0056b3;
-    }
     
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        margin-top: 30px;
-    }
+    
 </style>    
+</body>
+</html>

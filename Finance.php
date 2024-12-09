@@ -1,213 +1,460 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>NBC News Website</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Cooks Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- //js -->
-<!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet"> 
-<script src="js/wow.min.js"></script>
-<script>
- new WOW().init();
-</script>
-<!-- //animation-effect -->
-<link href='//fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finance - NBC News</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
+
+        
+        
 <body>
-<!-- header -->
-	<div class="header">
-		<div class="container">
-			<nav class="navbar navbar-default">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-					<div class="logo">
-						<a class="navbar-brand" href="index.html">News</a>
-					</div>
-				</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					<nav class="cl-effect-13" id="cl-effect-13">
-						<ul class="nav navbar-nav">
-							<li><a href="index.html" class="active">Home</a></li>
-							<li><a href="events.html">Finance</a></li>
-							<li><a href="short-codes.html">Blog</a></li>
-              <li><a href="index.html" class="active"></a></li>
-							<li><a href="events.html">Education</a></li>
-							<li><a href="short-codes.html">Sport</a></li>
-							<li><a href="short-codes.html">About Us</a></li>
-							<li role="presentation" class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								  Services <span class="caret"></span>
-								</a>
-                
-								<ul class="dropdown-menu">
-								  <li><a href="services.html">News Alerts</a></li>
-								  <li><a href="services.html">In-Depth Analysis and Features</a></li>
-								</ul>
-							</li>
-							<li><a href="mail.html">Mail Us</a></li>
-						</ul>
-					</nav>
+            <a href="index.php">Home</a>
+            <a href="finance.php">Finance</a>
+            <a href="education.php">Education</a>
+            <a href="sports.php">Sports</a>
+            <a href="about.php">About</a>
+            <a href="service.php">Service</a>
+        </div>
+    </nav>
 
-                    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-					<div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-<!-- //banner -->
-<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="container">
-			<div class="banner-bottom-grids">
-				<div class="col-md-5 banner-bottom-grid wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<h2>vel illum qui dolorem eum</h2>
-					<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-					ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
-					explicabo.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-7 banner-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<div class="banner-bottom-grid1">
-						<img src="images/1.jpg" alt=" " class="img-responsive" />
-						<div class="banner-bottom-grid-pos">
-							<div class="progress">
-							  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-								<span class="sr-only">30% Complete</span>
-							  </div>
-							</div>
-							<div class="progress progress1">
-							  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
-								<span class="sr-only">20% Complete</span>
-							  </div>
-							</div>
-							<div class="progress progress2">
-							  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-								<span class="sr-only">30% Complete</span>
-							  </div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="banner-bottom-grids">
-				<div class="col-md-6 banner-bottom-grid-1 wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<div class="banner-bottom-grid-11">
-						<img src="images/2.jpg" alt=" " class="img-responsive" />
-						<div class="banner-bottom-grid-11-pos">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-								sed do eiusmod tempor incididunt ut labore et dolore magna 
-								aliqua.Quis autem vel eum iure reprehenderit qui in ea voluptate
-								velit esse quam nihil molestiae consequatur.</p>
-							<div class="more m1">
-								<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 banner-bottom-grid-1 wow fadeInLeftBig" data-wow-duration="1500ms" data-wow-delay="100ms">
-					<h3>Excepteur sint occaecat cupidatat non proident</h3>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //banner-bottom -->
-<!-- newsletter -->
-	<div class="newsletter">
-		<div class="container">
-			<div class="newsletter-info">
-				<h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">Newsletter</h3>
-				<p class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">But who has any right to find fault with a man who chooses to enjoy 
-					a pleasure that has no annoying consequences</p>
-				<form class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<input type="mail" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}" required="">
-					<input type="submit" value="Send">
-				</form>
-			</div>
-		</div>
-	</div>
-<!-- //newsletter -->
-<!-- newsletter-bottom -->
-	<div class="newsletter-bottom">
-		<div class="container">
-			<div class="newsletter-bottom-grids">
-				<div class="col-md-6 newsletter-bottom-grid wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<h3>At vero eos et accusamus et iusto odio</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-						accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-						ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
-						explicabo.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-6 newsletter-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<img src="images/4.jpg" alt=" " class="img-responsive" />
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="newsletter-bottom-grids">
-				<div class="col-md-6 newsletter-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<img src="images/5.jpg" alt=" " class="img-responsive" />
-				</div>
-				<div class="col-md-6 newsletter-bottom-grid  wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<h3>At vero eos et accusamus et iusto odio</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-						accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-						ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt 
-						explicabo.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-<!-- //newsletter-bottom -->
+    
+
+    <div class="content">
+        <h1>Welcome to the Finance Section</h1>
+        <p>This is the finance section where you can get all the latest news and updates about the financial world.</p>
+        <!-- Add more content as needed -->
+    </div>
+
+    <section>
+      <h2>Letest Article</h2>
+        <div class="article-section">
+            <!-- Article 1 -->
+            <div class="article">
+                <img src="https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A43a2184f-4b86-434c-997d-115c66258185?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1" width="200px" height="300px" alt="Article Image">
+                <h2>Global Stock Markets Soar Amid Economic Recovery</h2>
+                <p>The global stock markets are experiencing significant gains as countries around the world recover from the economic impacts of the pandemic...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <img src="https://bitperfect.pe/wp-content/uploads/2024/12/compressed_4ab72909-8b08-49f1-9174-5c9f0e49ce05.png" width="200px" heigt="300px"alt="Article Image">
+                <h2>Cryptocurrency: The New Frontier in Investment</h2>
+                <p>Cryptocurrencies like Bitcoin and Ethereum are increasingly becoming a mainstream investment option, with many investors seeing them as the future of money...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article">
+                <img src="https://www.reuters.com/resizer/v2/TPCQEWEYBZO7JENQMB3TLCUPHM.jpg?auth=a29700372d41ca519f83b10d2fc53596cb8bcfcc733d7e834fd829a84c7d5800&width=720&quality=80" width="300px" height="200px" alt="Article Image">
+                <h2>How Inflation is Affecting Consumer Spending</h2>
+                <p>Inflation has been rising in several countries, leading to a shift in consumer spending patterns. People are tightening their belts, and businesses are adjusting their pricing strategies...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="article">
+                <img src="https://images.indianexpress.com/2024/09/fed-reserve.jpg?w=640"width="300px" height="200px" alt="Article Image">
+                <h2>Understanding Interest Rates and Their Impact on the Economy</h2>
+                <p>Interest rates play a critical role in shaping the economic landscape. Learn how central banks use them to control inflation, encourage or slow down economic growth...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+        <!-- Finance Tips Section -->
+        <h2>Finance Tips for You</h2>
+        <ul>
+            <li><strong>Start Saving Early:</strong> Time is your biggest ally when it comes to saving and investing. The earlier you start, the more you benefit from compound interest.</li>
+            <li><strong>Diversify Your Investments:</strong> Don't put all your eggs in one basket. Diversifying your investments reduces risk and improves your chances for long-term growth.</li>
+            <li><strong>Live Below Your Means:</strong> No matter how much you earn, make sure you spend less than what you make. This ensures you can save and invest for the future.</li>
+            <li><strong>Stay Educated About Finance:</strong> Keep learning about financial markets, trends, and investment strategies. Financial knowledge will help you make better decisions.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="background animation">
+        <h1 class="head text-center">Our Products</h1>
+    </div>
+    <!-- end background section -->
+
+
+    <!-- Start products section -->
+    <div class="products ani pt-5">
+        <div class="container text-center"></div>
+    </div>
+    <!-- end products section -->
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmluYW5jZXxlbnwwfHwwfHx8MA%3D%3D') 
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #f9a825;
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 80px; /* Adjusting content below navbar */
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark background for readability */
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .article-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .article {
+            background: rgba(0, 0, 0, 0.7);
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .article img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .article h2 {
+            font-size: 1.6rem;
+            color: #f9a825;
+            margin-top: 10px;
+        }
+
+        .article p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            color: #f9a825;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Finance Tips Section */
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            color: #f9a825;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
 <!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-grid wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<h3>cumque nihil impedit</h3>
-					<div class="footer-grd-left">
-						<img src="images/6.jpg" class="img-responsive" alt=" " />
-					</div>
-					<div class="footer-grd-left">
-						<p>Nam libero tempore, cum 
-							soluta nobis est eligendi optio cumque nihil impedit quo minus 
-							id quod maxime placeat facere possimus, omnis voluptas assumenda 
-							est, omnis dolor repellendus</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
+  
+<?php
+// Simulate a simple array of articles (This could be fetched from a database in a real-world application)
+$articles = [
+    [
+        'title' => 'Global Stock Markets Soar Amid Economic Recovery',
+        'content' => 'The global stock markets are experiencing significant gains as countries around the world recover from the economic impacts of the pandemic...',
+        'image' => 'https://image.cnbcfm.com/api/v1/image/108065947-1732135903752-gettyimages-1935926054-AFP_34ET38F.jpeg?v=1732863968&w=1480&h=833&ffmt=webp&vtcrop=y width="300px height="200px" ',
+        'link' => '#',
+    ],
+    [
+        'title' => 'Cryptocurrency: The New Frontier in Investment',
+        'content' => 'Cryptocurrencies like Bitcoin and Ethereum are increasingly becoming a mainstream investment option, with many investors seeing them as the future of money...',
+        'image' => 'https://townsquare.media/site/385/files/2024/05/attachment-6626D834-3126-43DC-8036-3773E8887860_1-1.jpg?w=980&q=75 width="300px" height="200px" ',
+        'link' => '#',
+    ],
+    [
+        'title' => 'How Inflation is Affecting Consumer Spending',
+        'content' => 'Inflation has been rising in several countries, leading to a shift in consumer spending patterns. People are tightening their belts, and businesses are adjusting their pricing strategies...',
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCwr-vCt34Mtq4mFe6-Z3w7mZLmx-TZbbU-w&s width="300px" height="200px" ',
+        'link' => '#',
+    ],
+    [
+        'title' => 'Understanding Interest Rates and Their Impact on the Economy',
+        'content' => 'Interest rates play a critical role in shaping the economic landscape. Learn how central banks use them to control inflation, encourage or slow down economic growth...',
+        'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLZUjJjx7vuJLE2IlYjbfRTWnO-RHJ07TAxw&s width="300x" height="200px" ',
+        'link' => '#',
+    ],
+];
 
-				
-				
+// Finance tips
+$financeTips = [
+    'Start Saving Early' => 'Time is your biggest ally when it comes to saving and investing. The earlier you start, the more you benefit from compound interest.',
+    'Diversify Your Investments' => "Don't put all your eggs in one basket. Diversifying your investments reduces risk and improves your chances for long-term growth.",
+    'Live Below Your Means' => "No matter how much you earn, make sure you spend less than what you make. This ensures you can save and invest for the future.",
+    'Stay Educated About Finance' => "Keep learning about financial markets, trends, and investment strategies. Financial knowledge will help you make better decisions.",
+];
+
+?>
+<div class="article-section">
+        <?php foreach ($articles as $article) : ?>
+            <div class="article">
+                <img src="<?php echo $article['image']; ?>" alt="Article Image">
+                <h2><?php echo $article['title']; ?></h2>
+                <p><?php echo $article['content']; ?></p>
+                <a href="<?php echo $article['link']; ?>" class="read-more">Read More</a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- Finance Tips Section -->
+    <h2>Finance Tips for You</h2>
+    <ul>
+        <?php foreach ($financeTips as $tip => $description) : ?>
+            <li><strong><?php echo $tip; ?>:</strong> <?php echo $description; ?></li>
+        <?php endforeach; ?>
+    </ul>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmluYW5jZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #f9a825;
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 80px;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Article Section */
+        .article-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .article {
+            background: rgba(0, 0, 0, 0.7);
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .article img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .article h2 {
+            font-size: 1.6rem;
+            color: #f9a825;
+            margin-top: 10px;
+        }
+
+        .article p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            color: #f9a825;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Finance Tips Section */
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            color: #f9a825;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+  
+
+<footer>
+        <p>&copy; 2024 NBC NEWS. All rights reserved.</p>
+      </footer>
+</body>
+
+</html>
