@@ -1,0 +1,273 @@
+<?php
+// db.php - Database connection
+$host = 'localhost';
+$dbname = 'news_website';
+$username = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+?>
+
+<?php
+// Functions.php - Contains all the core functionalities
+class Article {
+    // Fetch articles with pagination
+    public static function getArticles($limit, $offset) {
+        global $pdo;
+        $stmt = $pdo->prepare("SELECT * FROM articles ORDER BY created_at DESC LIMIT :limit OFFSET :offset");
+        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Get total article count
+    public static function getTotalArticles() {
+        global $pdo;
+        $stmt = $pdo->query("SELECT COUNT(*) FROM articles");
+        return $stmt->fetchColumn();
+    }
+
+    // Fetch single article
+    public static function getArticleById($id) {
+        global $pdo;
+        $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Get article categories
+    public static function getCategories() {
+        global $pdo;
+        $stmt = $pdo->query("SELECT * FROM categories");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Add new article (Admin)
+    public static function addArticle($title, $content, $author, $category_id) {
+        global $pdo;
+        $stmt = $pdo->prepare("INSERT INTO articles (title, content, author, category_id) VALUES (:title, :content, :author, :category_id)");
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':content', $content);
+        $stmt->bindParam(':author', $author);
+        $stmt->bindParam(':category_id', $category_id);
+        return $stmt->execute();
+    }
+    
+    // Add new comment
+    public static function addComment($article_id, $user_id, $content) {
+        global $pdo;
+        $stmt = $pdo->prepare("INSERT INTO comments (article_id, user_id, content) VALUES (:article_id, :user_id, :content)");
+        $stmt->bindParam(':article_id', $article_id);
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->bindParam(':content', $content);
+        return $stmt->execute();
+    }
+}
+
+// User authentication
+class User {
+    // Register new user
+    public static function register($username, $password) {
+        global $pdo;
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':password', $hashed_password);
+        return $stmt->execute();
+    }
+
+    // Login user
+    public static function login($username, $password) {
+        global $pdo;
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            return true;
+        }
+        return false;
+    }
+
+    // Check if user is logged in
+    public static function isLoggedIn() {
+        return isset($_SESSION['user_id']);
+    }
+
+    // Get current user info
+    public static function getUserInfo() {
+        return isset($_SESSION['username']) ? $_SESSION['username'] : '';
+    }
+
+    // Logout user
+    public static function logout() {
+        session_destroy();
+        header('Location: index.php');
+    }
+}
+?>
+
+<?php
+// index.php - Main page that displays articles, categories, and pagination
+session_start();
+include('db.php');
+include('functions.php');
+
+// Pagination setup
+$limit = 5; // Articles per page
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$offset = ($page - 1) * $limit;
+
+// Fetch articles
+$articles = Article::getArticles($limit, $offset);
+$totalArticles = Article::getTotalArticles();
+$totalPages = ceil($totalArticles / $limit);
+
+// Handle comment submission
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['comment_content'])) {
+    if (User::isLoggedIn()) {
+        $article_id = $_POST['article_id'];
+        $content = $_POST['comment_content'];
+        $user_id = $_SESSION['user_id'];
+
+        // Add comment to database
+        Article::addComment($article_id, $user_id, $content);
+        header("Location: article.php?id=$article_id");
+    } else {
+        echo "You need to be logged in to comment!";
+    }
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our News Website</h1>
+    <nav>
+        <a href="index.php">Home</a> | 
+        <?php if (User::isLoggedIn()): ?>
+            <a href="logout.php">Logout</a>
+        <?php else: ?>
+            <a href="login.php">Login</a> | 
+            <a href="register.php">Register</a>
+        <?php endif; ?>
+    </nav>
+</header>
+
+<main>
+    <div class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <?php foreach (Article::getCategories() as $category): ?>
+                <li><a href="category.php?id=<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+
+    <div class="articles">
+        <h2>Latest Articles</h2>
+        <?php foreach ($articles as $article): ?>
+            <div class="article">
+                <h3><a href="article.php?id=<?php echo $article['id']; ?>"><?php echo htmlspecialchars($article['title']); ?></a></h3>
+                <p><strong>Author:</strong> <?php echo htmlspecialchars($article['author']); ?></p>
+                <p><?php echo substr($article['content'], 0, 150); ?>...</p>
+                <a href="article.php?id=<?php echo $article['id']; ?>">Read more</a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="pagination">
+        <ul>
+            <?php if ($page > 1): ?>
+                <li><a href="index.php?page=<?php echo $page - 1; ?>">Previous</a></li>
+            <?php endif; ?>
+
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                <li><a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+            <?php endfor; ?>
+
+            <?php if ($page < $totalPages): ?>
+                <li><a href="index.php?page=<?php echo $page + 1; ?>">Next</a></li>
+            <?php endif; ?>
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>
+
+<?php
+// article.php - Display single article along with comments
+session_start();
+include('db.php');
+include('functions.php');
+
+// Fetch article by ID
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$article = Article::getArticleById($id);
+if (!$article) {
+    echo "Article not found!";
+    exit;
+}
+
+// Fetch comments
+$stmt = $pdo->prepare("SELECT c.content, c.created_at, u.username FROM comments c JOIN users u ON c.user_id = u.id WHERE c.article_id = :id");
+$stmt->execute(['id' => $id]);
+$comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($article['title']); ?></title>
+</head>
+<body>
+
+<header>
+    <h1><?php echo htmlspecialchars($article['title']); ?></h1>
+</header>
+
+<main>
+    <p><strong>Author:</strong> <?php echo htmlspecialchars($article['author']); ?></p>
+    <p><?php echo nl2br(htmlspecialchars($article['content'])); ?></p>
+
+    <h3>Comments</h3>
+    <?php foreach ($comments as $comment): ?>
+        <div class="comment">
+            <p><strong><?php echo htmlspecialchars($comment['username']); ?>:</strong> <?php echo htmlspecialchars($comment['content']); ?></p>
+            <p><em>Posted on <?php echo date('F j, Y', strtotime($comment['created_at'])); ?></em></p>
+        </div>
+    <?php endforeach; ?>
+
+    <h3>Leave a Comment</h3>
+    <form method="POST">
+        <textarea name="comment_content" required></textarea><br>
+        <input type="hidden" name="article_id" value="<?php echo $article['id']; ?>">
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+</body>
+</html>
+

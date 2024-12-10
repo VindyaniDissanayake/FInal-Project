@@ -289,11 +289,15 @@
         <ul class="nav-links">
             <li><a href="index.php">HOME</a></li>
             <li><a href="finance.php">FINANCE</a></li>
+            <li><a href="blog.php">BLOG</a></li>
             <li><a href="#">EDUCATION</a></li>
             <li><a href="#">SPORT</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">SERVICE</a></li>
             <li><a href="#">CONTACT</a></li>
+            <li><a href="education.php">EDUCATION</li>
+            <li><a href="login.php">LOGIN</li>
+        
         </ul>
     </nav>
 

@@ -16,11 +16,14 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.php">Home</a>
+            <a href="blog.php">Blog</a>
             <a href="finance">Finance</a>
             <a href="education.php">Education</a>
             <a href="sports.php">Sports</a>
             <a href="entertainment.php">About</a>
             <a href="services.php">Services</a>
+            <a href="login.php">Login</a>
+            
         </div>
     </nav>
 

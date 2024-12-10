@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +16,13 @@
         <div class="container">
             <a href="index.php">Home</a>
             <a href="finance.php">Finance</a>
+            <a href="blog.php">Blog</a>
             <a href="education.php">Education</a>
             <a href="sports.php">Sports</a>
             <a href="about.php">About</a>
             <a href="service.php">Service</a>
+            <a href="login.php">Login</a>
+            
         </div>
     </nav>
     <style>

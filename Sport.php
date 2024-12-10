@@ -17,10 +17,13 @@
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="finance.php">Finance</a></li>
+            <li><a href="blog.php">BLOG</a></li>
             <li><a href="education.php">Education</a></li>
             <li><a href="sport.php">Sport</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="service.php">Service</a></li>
+            <li><a href="login.php">Login</li>
+            
             
         </ul>
     </nav>

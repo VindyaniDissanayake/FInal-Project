@@ -36,112 +36,7 @@
 
 </head>
 
-<style>
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-/* Header styles */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-}
-
-header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main content styles */
-main {
-    padding: 40px 0;
-}
-
-.section {
-    padding: 60px 20px;
-    background-color: white;
-    margin-bottom: 20px;
-}
-
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-</style>     
-
-        
-            
 
         </div> 
     <nav class="nav">
@@ -160,12 +55,16 @@ footer p {
             <img src="">
             <button class="menu-toggle" id="menu-toggle">&#9776;</button>
             <ul class="nav-links" id="nav-links">
+
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="finance.php">FINANCE</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
                     <li><a href="education.php">EDUCATION</a></li>
                     <li><a href="sport.php">SPORT</a></li>
+                    <li><a href="login.php">LOGIN</li>
                     <li><a href="about.php">ABOUT</li>
                     <li><a href="service.php">SERVICE</a></li>
+                    
  
    
             </ul>
@@ -216,25 +115,7 @@ footer p {
 
                 <button class="cn"><a href="#">JOIN ME</a></button>
 
-                <div class="form">
-                    <h2>Login Here</h2>
-                    <input type="email" name="email" placeholder="Enter Email Here">
-                    <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="#">Login</a></button>
-
-                    <p class="link">Don't have an account<br>
-                    <a href="#">Sign up </a> here</a></p>
-                    <p class="liw">Log in with</p>
-
-                    <div class="icons">
-                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                    </div>
-
-                </div>
+               
                     </div>
                 </div>
         </div>
